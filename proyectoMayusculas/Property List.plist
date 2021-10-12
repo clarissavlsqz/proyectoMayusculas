@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>normas</key>
+		<array>
+			<integer>8</integer>
+		</array>
+		<key>tipo</key>
+		<integer>1</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>mundial</string>
+			<string>guerra</string>
+			<string>primera</string>
+			<string>la</string>
+		</array>
+		<key>enunciado</key>
+		<string>la primera guerra mundial inició el 28 de julio de 1914.</string>
+	</dict>
+	<dict>
+		<key>normas</key>
+		<array>
+			<integer>2</integer>
+			<integer>1</integer>
+		</array>
+		<key>tipo</key>
+		<integer>1</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>monterrey</string>
+			<string>leon</string>
+			<string>nuevo</string>
+			<string>la</string>
+		</array>
+		<key>enunciado</key>
+		<string>la capital de nuevo leon es monterrey.</string>
+	</dict>
+	<dict>
+		<key>normas</key>
+		<array>
+			<integer>1</integer>
+		</array>
+		<key>tipo</key>
+		<integer>1</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>méxico</string>
+		</array>
+		<key>enunciado</key>
+		<string>méxico tiene una gran diversidad de paisajes naturales</string>
+	</dict>
+	<dict>
+		<key>normas</key>
+		<array>
+			<string>5</string>
+			<string>2</string>
+		</array>
+		<key>tipo</key>
+		<integer>1</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>salud</string>
+			<string>mundial</string>
+			<string>organización</string>
+			<string>la</string>
+		</array>
+		<key>enunciado</key>
+		<string>la organización mundial de la salud no ha avalado todas las vacunas.</string>
+	</dict>
+	<dict>
+		<key>normas</key>
+		<array>
+			<string>2</string>
+			<string>9</string>
+		</array>
+		<key>tipo</key>
+		<integer>1</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>https://docs.google.com</string>
+			<string>la</string>
+		</array>
+		<key>enunciado</key>
+		<string>la dirección es https://docs.google.com</string>
+	</dict>
+	<dict>
+		<key>normas</key>
+		<array>
+			<string>2</string>
+			<string>1</string>
+		</array>
+		<key>tipo</key>
+		<integer>1</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>oro</string>
+			<string>siglo</string>
+			<string>barca</string>
+			<string>calderón</string>
+		</array>
+		<key>enunciado</key>
+		<string>calderón de la barca es un famoso escritor del siglo de oro español. </string>
+	</dict>
+	<dict>
+		<key>normas</key>
+		<array>
+			<integer>2</integer>
+		</array>
+		<key>tipo</key>
+		<integer>1</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>la</string>
+		</array>
+		<key>enunciado</key>
+		<string>la barca en que me iré lleva una cruz de olvido.</string>
+	</dict>
+</array>
+</plist>
