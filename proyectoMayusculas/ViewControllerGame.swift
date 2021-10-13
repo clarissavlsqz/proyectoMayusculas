@@ -11,6 +11,12 @@ class ViewControllerGame: UIViewController {
     
     var gameMode : Int!
     var difficulty : Int!
+    
+    @IBOutlet weak var labelInstruction: UILabel!
+    @IBOutlet weak var labelQuestion: UILabel!
+    @IBOutlet weak var buttonMin: UIButton!
+    @IBOutlet weak var buttonMayu: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
