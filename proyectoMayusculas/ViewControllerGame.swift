@@ -1,5 +1,5 @@
 //
-//  ViewControllerDifficulty.swift
+//  ViewControllerGame.swift
 //  proyectoMayusculas
 //
 //  Created by Clarissa Velásquez Magaña on 12/10/21.
@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ViewControllerDifficulty: UIViewController {
+class ViewControllerGame: UIViewController {
     
-    var modeGame : Int!
+    var gameMode : Int!
+    var difficulty : Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,21 +18,14 @@ class ViewControllerDifficulty: UIViewController {
     }
     
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let viewGame = segue.destination as! ViewControllerGame
-        if segue.identifier == "facil" {
-            viewGame.gameMode = modeGame
-            viewGame.difficulty = 1
-        }
-        else {
-            viewGame.gameMode = modeGame
-            viewGame.difficulty = 2
-        }
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
+    */
 
 }
