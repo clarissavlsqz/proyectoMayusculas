@@ -10,14 +10,14 @@ import Foundation
 class Pregunta : Codable {
     var tipo : Int
     var enunciado : String
-    var dificultd : Int
+    var dificultad : Int
     var respuesta : [String]
     var normas : [Int]
     
     init(tipo: Int, enunciado: String, dificultad: Int, respuesta: [String], normas: [Int]) {
         self.tipo = tipo
         self.enunciado = enunciado
-        self.dificultd = dificultad
+        self.dificultad = dificultad
         self.respuesta = respuesta
         self.normas = normas
     }

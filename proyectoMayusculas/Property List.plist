@@ -140,8 +140,8 @@
 	<dict>
 		<key>normas</key>
 		<array>
-			<string>5</string>
-			<string>2</string>
+			<integer>5</integer>
+			<integer>2</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -160,8 +160,8 @@
 	<dict>
 		<key>normas</key>
 		<array>
-			<string>2</string>
-			<string>9</string>
+			<integer>2</integer>
+			<integer>9</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -178,8 +178,8 @@
 	<dict>
 		<key>normas</key>
 		<array>
-			<string>2</string>
-			<string>1</string>
+			<integer>2</integer>
+			<integer>1</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>

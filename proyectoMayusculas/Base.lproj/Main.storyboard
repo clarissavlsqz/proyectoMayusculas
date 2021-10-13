@@ -210,7 +210,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.71268102570000003" green="0.74040146389999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="mayúscula">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -219,7 +219,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.71268102571024528" green="0.7404014639490446" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="button">
+                                <state key="normal" title="minúscula">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -228,6 +228,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="vKQ-d6-JRc"/>
+                    <connections>
+                        <outlet property="buttonMayu" destination="klE-Jz-dLi" id="eY2-Pc-yy3"/>
+                        <outlet property="buttonMin" destination="PoI-vh-C1N" id="vPM-TC-0Hk"/>
+                        <outlet property="labelInstruction" destination="quK-Wv-mlO" id="Lol-qv-cug"/>
+                        <outlet property="labelQuestion" destination="XAE-T0-aEr" id="bpX-xW-Bh6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kwb-4e-rCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
