@@ -21,6 +21,7 @@
 		6EE400C4271542FC0003459B /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EE400C3271542FC0003459B /* Property List.plist */; };
 		6EE400C72715B61B0003459B /* ViewControllerDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE400C62715B61B0003459B /* ViewControllerDifficulty.swift */; };
 		6EE400CE27168FD40003459B /* ViewControllerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE400CD27168FD40003459B /* ViewControllerGame.swift */; };
+		A06A7B4927175B8A0008EC65 /* ViewControllerEachRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06A7B4827175B8A0008EC65 /* ViewControllerEachRule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		6EE400C3271542FC0003459B /* Property List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		6EE400C62715B61B0003459B /* ViewControllerDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDifficulty.swift; sourceTree = "<group>"; };
 		6EE400CD27168FD40003459B /* ViewControllerGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGame.swift; sourceTree = "<group>"; };
+		A06A7B4827175B8A0008EC65 /* ViewControllerEachRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEachRule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				6EE400C3271542FC0003459B /* Property List.plist */,
 				6E1CECA8270BAB9D00228449 /* TableViewController.swift */,
 				6E1CECA5270BAB6100228449 /* ViewControllerInformation.swift */,
+				A06A7B4827175B8A0008EC65 /* ViewControllerEachRule.swift */,
 				6E1CECA2270BAB0200228449 /* ViewControllerMainRules.swift */,
 				6E2F498D27062F3D00513209 /* Assets.xcassets */,
 				6E2F498F27062F3D00513209 /* LaunchScreen.storyboard */,
@@ -170,6 +173,7 @@
 				6E1CECA6270BAB6100228449 /* ViewControllerInformation.swift in Sources */,
 				6E2F498727062F3C00513209 /* SceneDelegate.swift in Sources */,
 				6E1CECA3270BAB0200228449 /* ViewControllerMainRules.swift in Sources */,
+				A06A7B4927175B8A0008EC65 /* ViewControllerEachRule.swift in Sources */,
 				6E9B84E0271177100001083E /* Pregunta.swift in Sources */,
 				6EE400C72715B61B0003459B /* ViewControllerDifficulty.swift in Sources */,
 			);
