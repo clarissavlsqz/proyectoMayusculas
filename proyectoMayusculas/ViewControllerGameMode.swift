@@ -24,7 +24,7 @@ class ViewControllerGameMode: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewDifficulty = segue.destination as! ViewControllerDifficulty
         
-        if segue.identifier == "basico" {
+        if segue.identifier == "zen" {
             viewDifficulty.modeGame = 1
         }
         else {

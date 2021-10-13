@@ -109,7 +109,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="b3s-rE-Ycb" kind="show" identifier="basico" id="jYJ-C2-TAn"/>
+                                    <segue destination="b3s-rE-Ycb" kind="show" identifier="zen" id="jYJ-C2-TAn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPm-vI-pkE">
@@ -121,7 +121,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="b3s-rE-Ycb" kind="show" identifier="zen" id="NDe-EA-VG4"/>
+                                    <segue destination="b3s-rE-Ycb" kind="show" identifier="contrareloj" id="NDe-EA-VG4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -493,7 +493,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="iS8-qs-fK2"/>
         <segue reference="fku-MO-Efw"/>
-        <segue reference="NDe-EA-VG4"/>
+        <segue reference="jYJ-C2-TAn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="logo" width="1182" height="1182"/>
