@@ -5,12 +5,92 @@
 	<dict>
 		<key>normas</key>
 		<array>
-			<integer>8</integer>
+			<integer>1</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
 		<key>dificultad</key>
 		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>min</string>
+		</array>
+		<key>enunciado</key>
+		<string>jueves</string>
+	</dict>
+	<dict>
+		<key>normas</key>
+		<array>
+			<integer>1</integer>
+		</array>
+		<key>tipo</key>
+		<integer>1</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>min</string>
+		</array>
+		<key>enunciado</key>
+		<string>agosto</string>
+	</dict>
+	<dict>
+		<key>normas</key>
+		<array>
+			<integer>1</integer>
+		</array>
+		<key>tipo</key>
+		<integer>1</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>min</string>
+		</array>
+		<key>enunciado</key>
+		<string>madre</string>
+	</dict>
+	<dict>
+		<key>normas</key>
+		<array>
+			<integer>1</integer>
+		</array>
+		<key>tipo</key>
+		<integer>1</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>mayu</string>
+		</array>
+		<key>enunciado</key>
+		<string>mario</string>
+	</dict>
+	<dict>
+		<key>normas</key>
+		<array>
+			<integer>1</integer>
+		</array>
+		<key>tipo</key>
+		<integer>1</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>mayu</string>
+		</array>
+		<key>enunciado</key>
+		<string>guadalupe</string>
+	</dict>
+	<dict>
+		<key>normas</key>
+		<array>
+			<integer>8</integer>
+		</array>
+		<key>tipo</key>
+		<integer>1</integer>
+		<key>dificultad</key>
+		<integer>2</integer>
 		<key>respuesta</key>
 		<array>
 			<string>mundial</string>
@@ -30,7 +110,7 @@
 		<key>tipo</key>
 		<integer>1</integer>
 		<key>dificultad</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>respuesta</key>
 		<array>
 			<string>monterrey</string>
@@ -49,7 +129,7 @@
 		<key>tipo</key>
 		<integer>1</integer>
 		<key>dificultad</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>respuesta</key>
 		<array>
 			<string>méxico</string>
@@ -66,7 +146,7 @@
 		<key>tipo</key>
 		<integer>1</integer>
 		<key>dificultad</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>respuesta</key>
 		<array>
 			<string>salud</string>
@@ -86,7 +166,7 @@
 		<key>tipo</key>
 		<integer>1</integer>
 		<key>dificultad</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>respuesta</key>
 		<array>
 			<string>https://docs.google.com</string>
@@ -104,7 +184,7 @@
 		<key>tipo</key>
 		<integer>1</integer>
 		<key>dificultad</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>respuesta</key>
 		<array>
 			<string>oro</string>
@@ -123,7 +203,7 @@
 		<key>tipo</key>
 		<integer>1</integer>
 		<key>dificultad</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>respuesta</key>
 		<array>
 			<string>la</string>
