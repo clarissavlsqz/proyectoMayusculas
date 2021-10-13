@@ -33,7 +33,9 @@ class ViewControllerGame: UIViewController {
         
         getAllQuestions()
         getRealQuestions()
+        newQuestion()
     }
+    
     
     func getAllQuestions() {
         do {
@@ -61,10 +63,38 @@ class ViewControllerGame: UIViewController {
             labelInstruction.text = "Seleccione las palabras que deben de llevar mayúscula"
         }
         
-        
+        labelQuestion.text = toUseQuestionList[currQuestion].enunciado
+    
+    }
+    
+    @IBAction func pressedMin(_ sender: UIButton) {
+        if toUseQuestionList[currQuestion].respuesta[0] == "min" {
+            score += 1
+            print("correct")
+        }
+        currQuestion += 1
+        if (currQuestion < toUseQuestionList.count) {
+            newQuestion()
+        }
         
         
     }
+    
+    @IBAction func pressedMayu(_ sender: Any) {
+        if toUseQuestionList[currQuestion].respuesta[0] == "mayu" {
+            score += 1
+            print("correct")
+        }
+        currQuestion += 1
+        if (currQuestion < toUseQuestionList.count) {
+            newQuestion()
+        }
+    }
+    
+    
+    
+    
+    
     
     /*
     // MARK: - Navigation
