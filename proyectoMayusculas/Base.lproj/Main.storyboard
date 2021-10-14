@@ -253,9 +253,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="pNN-dc-7Hi">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="pNN-dc-7Hi">
                                 <rect key="frame" x="114" y="478" width="146" height="122"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cUt-WZ-wPr" appends="YES" id="0qK-b6-lht"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Información" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebf-gJ-5Qk">
                                 <rect key="frame" x="101" y="96" width="173" height="36"/>
@@ -277,10 +281,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="L2q-d0-Mzd"/>
                     <connections>
+                        <outlet property="imageLogo" destination="pNN-dc-7Hi" id="Fhp-7Y-WLH"/>
                         <outlet property="labelInfo" destination="TlZ-Vv-lzh" id="dOk-NY-dBO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NG5-FA-AQR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cUt-WZ-wPr">
+                    <connections>
+                        <action selector="tapLogo:" destination="Vid-ct-3aw" id="tXU-e9-jGb"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="208.80000000000001" y="938.68065967016503"/>
         </scene>

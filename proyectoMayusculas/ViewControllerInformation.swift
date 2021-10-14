@@ -17,8 +17,10 @@ class ViewControllerInformation: UIViewController {
     let attrs = [NSAttributedString.Key.font: UIFont.italicSystemFont(ofSize: 12)]
     
     
-
+    
+    @IBOutlet weak var imageLogo: UIImageView!
     @IBOutlet weak var labelInfo: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +42,14 @@ class ViewControllerInformation: UIViewController {
         labelInfo.attributedText = attrString
         
     }
+    @IBAction func tapLogo(_ sender: UITapGestureRecognizer) {
+        if let url = URL(string: "https://sites.google.com/itesm.mx/cescrituratec/") {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+    }
+    
 
     /*
     // MARK: - Navigation
