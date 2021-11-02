@@ -21,6 +21,7 @@ class ViewControllerGame: UIViewController {
     @IBOutlet weak var labelQuestion: UILabel!
     @IBOutlet weak var buttonMin: UIButton!
     @IBOutlet weak var buttonMayu: UIButton!
+    @IBOutlet weak var labelScore: UILabel!
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -34,6 +35,8 @@ class ViewControllerGame: UIViewController {
         getAllQuestions()
         getRealQuestions()
         newQuestion()
+        
+        labelScore.text = "0/15"
     }
     
     
@@ -71,6 +74,7 @@ class ViewControllerGame: UIViewController {
         if toUseQuestionList[currQuestion].respuesta[0] == "min" {
             score += 1
             print("correct")
+            labelScore.text = "\(score)/15"
         }
         currQuestion += 1
         if (currQuestion < toUseQuestionList.count) {
@@ -84,6 +88,7 @@ class ViewControllerGame: UIViewController {
         if toUseQuestionList[currQuestion].respuesta[0] == "mayu" {
             score += 1
             print("correct")
+            labelScore.text = "\(score)/15"
         }
         currQuestion += 1
         if (currQuestion < toUseQuestionList.count) {

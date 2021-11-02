@@ -229,6 +229,20 @@
                                     <action selector="pressedMin:" destination="8V8-Q2-r6q" eventType="touchUpInside" id="3JT-sx-mOT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aciertos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgx-bE-1Zy">
+                                <rect key="frame" x="268" y="37" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSE-OO-ukT">
+                                <rect key="frame" x="251" y="70" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Y9-wG-pNu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -239,6 +253,7 @@
                         <outlet property="buttonMin" destination="PoI-vh-C1N" id="vPM-TC-0Hk"/>
                         <outlet property="labelInstruction" destination="quK-Wv-mlO" id="Lol-qv-cug"/>
                         <outlet property="labelQuestion" destination="XAE-T0-aEr" id="bpX-xW-Bh6"/>
+                        <outlet property="labelScore" destination="RSE-OO-ukT" id="IKG-HO-KlE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kwb-4e-rCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
