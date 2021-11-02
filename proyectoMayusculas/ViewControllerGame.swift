@@ -60,10 +60,10 @@ class ViewControllerGame: UIViewController {
     
     func newQuestion() {
         if difficulty == 1 {
-            labelInstruction.text = "Seleccione si la palabra debe llevar mayúscula o minúscula"
+            labelInstruction.text = "Seleccione si la palabra debe iniciar con mayúscula o minúscula"
         }
         else if difficulty == 2 {
-            labelInstruction.text = "Seleccione las palabras que deben de llevar mayúscula"
+            labelInstruction.text = "Seleccione las palabras que deben de iniciar con mayúscula"
         }
         
         labelQuestion.text = toUseQuestionList[currQuestion].enunciado
