@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>opciones</key>
+		<array/>
 		<key>normas</key>
 		<array>
 			<integer>1</integer>
@@ -19,6 +21,8 @@
 		<string>jueves</string>
 	</dict>
 	<dict>
+		<key>opciones</key>
+		<array/>
 		<key>normas</key>
 		<array>
 			<integer>1</integer>
@@ -35,6 +39,8 @@
 		<string>agosto</string>
 	</dict>
 	<dict>
+		<key>opciones</key>
+		<array/>
 		<key>normas</key>
 		<array>
 			<integer>1</integer>
@@ -51,6 +57,8 @@
 		<string>madre</string>
 	</dict>
 	<dict>
+		<key>opciones</key>
+		<array/>
 		<key>normas</key>
 		<array>
 			<integer>1</integer>
@@ -67,6 +75,8 @@
 		<string>mario</string>
 	</dict>
 	<dict>
+		<key>opciones</key>
+		<array/>
 		<key>normas</key>
 		<array>
 			<integer>1</integer>
@@ -83,6 +93,29 @@
 		<string>guadalupe</string>
 	</dict>
 	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>mundial</string>
+				<string>guerra</string>
+				<string>primera</string>
+				<string>la</string>
+			</array>
+			<array>
+				<string>primera</string>
+				<string>guerra</string>
+				<string>mundial</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>guerra</string>
+				<string>mundial</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>julio</string>
+			</array>
+		</array>
 		<key>normas</key>
 		<array>
 			<integer>8</integer>
@@ -102,6 +135,32 @@
 		<string>la primera guerra mundial inició el 28 de julio de 1914.</string>
 	</dict>
 	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>monterrey</string>
+				<string>leon</string>
+				<string>nuevo</string>
+				<string>la</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>capital</string>
+				<string>nuevo</string>
+			</array>
+			<array>
+				<string>nuevo</string>
+				<string>león</string>
+				<string>monterrey</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>capital</string>
+				<string>nuevo</string>
+				<string>león</string>
+				<string>monterrey</string>
+			</array>
+		</array>
 		<key>normas</key>
 		<array>
 			<integer>2</integer>
@@ -119,9 +178,29 @@
 			<string>la</string>
 		</array>
 		<key>enunciado</key>
-		<string>la capital de nuevo leon es monterrey.</string>
+		<string>la capital de nuevo león es monterrey.</string>
 	</dict>
 	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>méxico</string>
+			</array>
+			<array>
+				<string>méxico</string>
+				<string>paisajes</string>
+				<string>naturales</string>
+			</array>
+			<array>
+				<string>diversidad</string>
+				<string>paisajes</string>
+				<string>naturales</string>
+			</array>
+			<array>
+				<string>méxico</string>
+				<string>naturales</string>
+			</array>
+		</array>
 		<key>normas</key>
 		<array>
 			<integer>1</integer>
@@ -138,6 +217,33 @@
 		<string>méxico tiene una gran diversidad de paisajes naturales</string>
 	</dict>
 	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>salud</string>
+				<string>mundial</string>
+				<string>organización</string>
+				<string>la</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>salud</string>
+				<string>vacunas</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>organización</string>
+				<string>salud</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>organización</string>
+				<string>mundial</string>
+				<string>de</string>
+				<string>la</string>
+				<string>salud</string>
+			</array>
+		</array>
 		<key>normas</key>
 		<array>
 			<integer>5</integer>
@@ -158,6 +264,26 @@
 		<string>la organización mundial de la salud no ha avalado todas las vacunas.</string>
 	</dict>
 	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>https://docs.google.com</string>
+				<string>la</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>dirección</string>
+				<string>https://docs.google.com</string>
+			</array>
+			<array>
+				<string>dirección</string>
+				<string>https://docs.google.com</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>dirección</string>
+			</array>
+		</array>
 		<key>normas</key>
 		<array>
 			<integer>2</integer>
@@ -176,6 +302,29 @@
 		<string>la dirección es https://docs.google.com</string>
 	</dict>
 	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>oro</string>
+				<string>siglo</string>
+				<string>barca</string>
+				<string>calderón</string>
+			</array>
+			<array>
+				<string>calderón</string>
+				<string>oro</string>
+				<string>español</string>
+			</array>
+			<array>
+				<string>calderón</string>
+				<string>español</string>
+			</array>
+			<array>
+				<string>calderón</string>
+				<string>barca</string>
+				<string>español</string>
+			</array>
+		</array>
 		<key>normas</key>
 		<array>
 			<integer>2</integer>
@@ -196,6 +345,26 @@
 		<string>calderón de la barca es un famoso escritor del siglo de oro español. </string>
 	</dict>
 	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>la</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>barca</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>barca</string>
+				<string>cruz</string>
+				<string>olvido</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>cruz</string>
+			</array>
+		</array>
 		<key>normas</key>
 		<array>
 			<integer>2</integer>
