@@ -16,6 +16,7 @@ class ViewControllerGame: UIViewController {
     var toUseQuestionList = [Pregunta]()
     var currQuestion = 0
     var score = 0
+    var rulesToCheck : Set<Int> = []
     
     @IBOutlet weak var labelInstruction: UILabel!
     @IBOutlet weak var labelQuestion: UILabel!
@@ -36,7 +37,7 @@ class ViewControllerGame: UIViewController {
         getRealQuestions()
         newQuestion()
         
-        labelScore.text = "0/15"
+        labelScore.text = "0/\(toUseQuestionList.count)"
     }
     
     
@@ -70,15 +71,35 @@ class ViewControllerGame: UIViewController {
     
     }
     
+    func showResults() {
+        let alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/\(toUseQuestionList.count) aciertos", preferredStyle: UIAlertController.Style.alert)
+        
+        let saveAction = UIAlertAction(title: "Guardar", style: UIAlertAction.Style.default, handler: nil)
+        
+        let cancelAction = UIAlertAction(title: "Salir", style: .cancel, handler: nil)
+        
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func pressedMin(_ sender: UIButton) {
         if toUseQuestionList[currQuestion].respuesta[0] == "min" {
             score += 1
             print("correct")
-            labelScore.text = "\(score)/15"
+            labelScore.text = "\(score)/\(toUseQuestionList.count)"
         }
+        else {
+            rulesToCheck.formUnion(toUseQuestionList[currQuestion].normas)
+        }
+        
         currQuestion += 1
         if (currQuestion < toUseQuestionList.count) {
             newQuestion()
+        }
+        else {
+            showResults()
         }
         
         
@@ -88,11 +109,17 @@ class ViewControllerGame: UIViewController {
         if toUseQuestionList[currQuestion].respuesta[0] == "mayu" {
             score += 1
             print("correct")
-            labelScore.text = "\(score)/15"
+            labelScore.text = "\(score)/\(toUseQuestionList.count)"
+        }
+        else {
+            rulesToCheck.formUnion(toUseQuestionList[currQuestion].normas)
         }
         currQuestion += 1
         if (currQuestion < toUseQuestionList.count) {
             newQuestion()
+        }
+        else {
+            showResults()
         }
     }
     
