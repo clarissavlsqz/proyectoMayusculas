@@ -24,6 +24,11 @@ class ViewControllerGame: UIViewController {
     @IBOutlet weak var buttonMayu: UIButton!
     @IBOutlet weak var labelScore: UILabel!
     
+    @IBOutlet weak var buttonOpc1: UIButton!
+    @IBOutlet weak var buttonOpc2: UIButton!
+    @IBOutlet weak var buttonOpc3: UIButton!
+    @IBOutlet weak var buttonOpc4: UIButton!
+    
     override func viewDidAppear(_ animated: Bool) {
         
     }
@@ -62,9 +67,17 @@ class ViewControllerGame: UIViewController {
     func newQuestion() {
         if difficulty == 1 {
             labelInstruction.text = "Seleccione si la palabra debe iniciar con mayúscula o minúscula"
+            buttonMin.setTitle("minúscula", for: .normal)
+            buttonMayu.setTitle("mayúscula", for: .normal)
+            
+            desactivaBotones()
+            
         }
         else if difficulty == 2 {
             labelInstruction.text = "Seleccione las palabras que deben de iniciar con mayúscula"
+            
+            desactivaBotones()
+            
         }
         
         labelQuestion.text = toUseQuestionList[currQuestion].enunciado
@@ -123,7 +136,42 @@ class ViewControllerGame: UIViewController {
         }
     }
     
-    
+    func desactivaBotones(){
+        if difficulty == 1 {
+            buttonOpc1.isEnabled = false
+            buttonOpc2.isEnabled = false
+            buttonOpc3.isEnabled = false
+            buttonOpc4.isEnabled = false
+            
+            buttonMin.isEnabled = true
+            buttonMayu.isEnabled = true
+            
+            buttonOpc1.backgroundColor = .white
+            buttonOpc2.backgroundColor = .white
+            buttonOpc3.backgroundColor = .white
+            buttonOpc4.backgroundColor = .white
+            
+            buttonOpc1.setTitleColor(UIColor.white, for: UIControl.State.disabled)
+            buttonOpc2.setTitleColor(UIColor.white, for: UIControl.State.disabled)
+            buttonOpc3.setTitleColor(UIColor.white, for: UIControl.State.disabled)
+            buttonOpc4.setTitleColor(UIColor.white, for: UIControl.State.disabled)
+            
+        }else if difficulty == 2 {
+            buttonMin.isEnabled = false
+            buttonMayu.isEnabled = false
+            
+            buttonOpc1.isEnabled = true
+            buttonOpc2.isEnabled = true
+            buttonOpc3.isEnabled = true
+            buttonOpc4.isEnabled = true
+            
+            buttonMin.backgroundColor = .white
+            buttonMayu.backgroundColor = .white
+            
+            buttonMin.setTitleColor(UIColor.white, for: UIControl.State.disabled)
+            buttonMayu.setTitleColor(UIColor.white, for: UIControl.State.disabled)
+        }
+    }
     
     
     
