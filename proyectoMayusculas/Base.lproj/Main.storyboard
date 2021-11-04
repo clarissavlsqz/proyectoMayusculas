@@ -49,7 +49,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xjj-k7-TiO" kind="show" id="lxm-CS-oRa"/>
+                                    <segue destination="QE9-Ok-tg5" kind="show" id="SOn-Ot-ME7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoO-zH-MVH">
@@ -133,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHl-YU-dbE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="89"/>
+            <point key="canvasLocation" x="1086" y="89"/>
         </scene>
         <!--View Controller Difficulty-->
         <scene sceneID="zIq-5J-E4l">
@@ -182,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7j-Rs-E5a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2612" y="89"/>
+            <point key="canvasLocation" x="1897" y="89"/>
         </scene>
         <!--View Controller Game-->
         <scene sceneID="apE-zO-OnO">
@@ -252,6 +252,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Opción 1">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickOptionButton:" destination="8V8-Q2-r6q" eventType="touchUpInside" id="xk6-kQ-Msr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edo-4S-jqH">
                                 <rect key="frame" x="117" y="455" width="141" height="53"/>
@@ -261,6 +264,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Opción 2">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickOptionButton:" destination="8V8-Q2-r6q" eventType="touchUpInside" id="qNd-1J-1Tp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Le5-ZG-SGp">
                                 <rect key="frame" x="117" y="518" width="141" height="53"/>
@@ -270,6 +276,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Opción 3">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickOptionButton:" destination="8V8-Q2-r6q" eventType="touchUpInside" id="DJC-st-8XU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8y-E4-7Vg">
                                 <rect key="frame" x="117" y="581" width="141" height="53"/>
@@ -279,6 +288,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Opción 4">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickOptionButton:" destination="8V8-Q2-r6q" eventType="touchUpInside" id="cae-2T-xIt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Y9-wG-pNu"/>
@@ -299,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kwb-4e-rCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3446" y="89"/>
+            <point key="canvasLocation" x="2825" y="89"/>
         </scene>
         <!--View Controller Information-->
         <scene sceneID="VGf-gx-KBD">
@@ -401,17 +413,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edf-f1-9fJ">
-                                <rect key="frame" x="137" y="381" width="100" height="56"/>
+                                <rect key="frame" x="133" y="381" width="109" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.60362356900000003" green="0.66209632159999998" blue="0.9608737826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Jugar">
+                                <buttonConfiguration key="configuration" style="plain" title="Aceptar">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="QE9-Ok-tg5" kind="show" id="Icc-7x-d3I"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s1u-BQ-QYZ"/>
@@ -424,7 +433,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QaC-m0-rT7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132" y="89"/>
+            <point key="canvasLocation" x="2825" y="815"/>
         </scene>
         <!--View Controller Main Rules-->
         <scene sceneID="cwl-VL-SQV">

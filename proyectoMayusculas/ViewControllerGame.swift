@@ -19,6 +19,7 @@ class ViewControllerGame: UIViewController {
     var rulesToCheck : Set<Int> = []
     var finalScore: Int = 0
     var secondsFromTimer: Int = 15
+    var rightAnswer: String = ""
     
     @IBOutlet weak var labelInstruction: UILabel!
     @IBOutlet weak var labelQuestion: UILabel!
@@ -205,6 +206,13 @@ class ViewControllerGame: UIViewController {
             optionsWords.append(wordProv)
         }
         
+        //Se obtiene la respuesta correcta
+        rightAnswer = ""
+        for r in toUseQuestionList[currQuestion].respuesta{
+            rightAnswer += r + ", "
+        }
+        print(rightAnswer)
+        
         //Se revuelve el arreglo que contiene las opciones de respuesta
         optionsWords.shuffle()
         
@@ -213,9 +221,30 @@ class ViewControllerGame: UIViewController {
         buttonOpc2.setTitle(optionsWords[1], for: .normal)
         buttonOpc3.setTitle(optionsWords[2], for: .normal)
         buttonOpc4.setTitle(optionsWords[3], for: .normal)
-        print(optionsWords)
+        //print(optionsWords)
     
     }
+    
+    //Función para validar las respuestas con 4 opciones
+    @IBAction func clickOptionButton(_ sender: UIButton) {
+        if(sender.titleLabel?.text == rightAnswer) {
+            score += 1
+            print("correct")
+            labelScore.text = "\(score)/\(toUseQuestionList.count)"
+        }else{
+            print("incorrect")
+        }
+        
+        currQuestion += 1
+        if (currQuestion < toUseQuestionList.count) {
+            newQuestion()
+        }
+        else {
+            showResults()
+        }
+        
+    }
+    
     
     //Función para calcular el Score final
     func calcFinalScore() {
