@@ -379,10 +379,10 @@
             </objects>
             <point key="canvasLocation" x="1193" y="939"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller User Name-->
         <scene sceneID="a9P-v9-XO5">
             <objects>
-                <viewController id="xjj-k7-TiO" sceneMemberID="viewController">
+                <viewController id="xjj-k7-TiO" customClass="ViewControllerUserName" customModule="proyectoMayusculas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ft9-kb-ndH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -418,6 +418,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="afE-la-Wbh"/>
+                    <connections>
+                        <outlet property="lbUserName" destination="RfH-wK-GnK" id="v9D-cF-ud0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QaC-m0-rT7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
