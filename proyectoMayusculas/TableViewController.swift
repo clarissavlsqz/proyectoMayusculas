@@ -9,6 +9,11 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    @IBOutlet weak var segControl: UISegmentedControl!
+    
+    var arreglo = [Int] ()
+    var key = "ZF"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,29 +22,60 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        actualizaArreglo()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return arreglo.count
     }
-
-    /*
+    
+    func actualizaArreglo(){
+        let defaults = UserDefaults.standard
+        
+        if let arr = defaults.object(forKey: key) as? [Int]{
+            arreglo = arr
+            print(arr[arr.count-1])
+            arreglo.sort(by: >)
+        }else{
+            arreglo = []
+        }
+        tableView.reloadData()
+    }
+    
+    
+    @IBAction func changeTable(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex{
+        case 0:
+            key = "ZF"
+        case 1:
+            key = "ZD"
+        case 2:
+            key = "CF"
+        case 3:
+            key = "CD"
+        default:
+            key = "ZF"
+        }
+        actualizaArreglo()
+    }
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+         let cell = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
 
-        // Configure the cell...
-
-        return cell
+         // Configure the cell...
+         cell.textLabel?.text = String(arreglo[indexPath.row])
+         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

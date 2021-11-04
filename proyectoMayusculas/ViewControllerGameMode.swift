@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewControllerGameMode: UIViewController {
-
+    var modalidad : String!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,11 +26,13 @@ class ViewControllerGameMode: UIViewController {
         
         if segue.identifier == "zen" {
             viewDifficulty.modeGame = 1
+            modalidad = "Z"
         }
         else {
             viewDifficulty.modeGame = 2
+            modalidad = "C"
         }
-        
+        viewDifficulty.modalidad = modalidad
         
     }
     
