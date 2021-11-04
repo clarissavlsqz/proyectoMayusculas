@@ -20,6 +20,7 @@ class ViewControllerGame: UIViewController {
     var finalScore: Int = 0
     var secondsFromTimer: Int = 15
     var rightAnswer: String = ""
+    var modalidad : String!
     
     @IBOutlet weak var labelInstruction: UILabel!
     @IBOutlet weak var labelQuestion: UILabel!
@@ -40,6 +41,8 @@ class ViewControllerGame: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        print(modalidad)
         ruta = Bundle.main.path(forResource: "Property List", ofType: "plist")
         
         getAllQuestions()
@@ -105,7 +108,10 @@ class ViewControllerGame: UIViewController {
         }
         
         
-        let saveAction = UIAlertAction(title: "Guardar", style: UIAlertAction.Style.default, handler: nil)
+        let saveAction = UIAlertAction(title: "Guardar", style: UIAlertAction.Style.default, handler: {(action:UIAlertAction!) in
+            print("GUARDAR")
+            self.guardarDatos()
+        })
         
         let cancelAction = UIAlertAction(title: "Salir", style: .cancel, handler: nil)
         
@@ -113,6 +119,37 @@ class ViewControllerGame: UIViewController {
         alert.addAction(cancelAction)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func guardarDatos(){
+        calcFinalScore()
+        
+        let defaults = UserDefaults.standard
+        if let unwMod = modalidad{
+            print("SE LOGRO WU " + unwMod)
+            if var arr = defaults.object(forKey: unwMod) as? [Int]{
+                arr.sort(by: >)
+                if arr.count < 10{
+                    arr.append(finalScore)
+                    arr.sort(by: >)
+                    defaults.set(arr, forKey: unwMod)
+                }else if finalScore > arr[arr.count-1]{
+                    //print(arr[arr.count-1])
+                    arr.remove(at: arr.count-1)
+                    //print(arr[arr.count-1])
+                    arr.append(finalScore)
+                    //print(arr[arr.count-1])
+                    arr.sort(by: >)
+                    defaults.set(arr, forKey: unwMod)
+                }
+            }else{
+                var arr = [Int] ()
+                arr.append(finalScore)
+                arr.sort(by: >)
+                defaults.set(arr, forKey: unwMod)
+            }
+            
+        }
     }
     
     @IBAction func pressedMin(_ sender: UIButton) {
