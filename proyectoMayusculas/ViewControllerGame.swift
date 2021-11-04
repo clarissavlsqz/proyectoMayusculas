@@ -136,6 +136,7 @@ class ViewControllerGame: UIViewController {
         }
     }
     
+    //Función que cambia la configuración de los botones en pantalla dependiendo de la dificultad establecida
     func desactivaBotones(){
         if difficulty == 1 {
             buttonOpc1.isEnabled = false
@@ -146,10 +147,10 @@ class ViewControllerGame: UIViewController {
             buttonMin.isEnabled = true
             buttonMayu.isEnabled = true
             
-            buttonOpc1.backgroundColor = .white
-            buttonOpc2.backgroundColor = .white
-            buttonOpc3.backgroundColor = .white
-            buttonOpc4.backgroundColor = .white
+            buttonOpc1.backgroundColor = .none
+            buttonOpc2.backgroundColor = .none
+            buttonOpc3.backgroundColor = .none
+            buttonOpc4.backgroundColor = .none
             
             buttonOpc1.setTitleColor(UIColor.white, for: UIControl.State.disabled)
             buttonOpc2.setTitleColor(UIColor.white, for: UIControl.State.disabled)
@@ -165,13 +166,21 @@ class ViewControllerGame: UIViewController {
             buttonOpc3.isEnabled = true
             buttonOpc4.isEnabled = true
             
-            buttonMin.backgroundColor = .white
-            buttonMayu.backgroundColor = .white
+            buttonMin.backgroundColor = .none
+            buttonMayu.backgroundColor = .none
             
             buttonMin.setTitleColor(UIColor.white, for: UIControl.State.disabled)
             buttonMayu.setTitleColor(UIColor.white, for: UIControl.State.disabled)
         }
     }
+    
+    /*func textForButton(){
+        for i in toUseQuestionList[currQuestion].opciones{
+            for ip in opciones {
+                print(ip)
+            }
+        }
+    }*/
     
     
     
