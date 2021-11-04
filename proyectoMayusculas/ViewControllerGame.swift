@@ -17,6 +17,8 @@ class ViewControllerGame: UIViewController {
     var currQuestion = 0
     var score = 0
     var rulesToCheck : Set<Int> = []
+    var finalScore: Int = 0
+    var secondsFromTimer: Int = 15
     
     @IBOutlet weak var labelInstruction: UILabel!
     @IBOutlet weak var labelQuestion: UILabel!
@@ -28,6 +30,7 @@ class ViewControllerGame: UIViewController {
     @IBOutlet weak var buttonOpc2: UIButton!
     @IBOutlet weak var buttonOpc3: UIButton!
     @IBOutlet weak var buttonOpc4: UIButton!
+    
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -77,6 +80,7 @@ class ViewControllerGame: UIViewController {
             labelInstruction.text = "Seleccione las palabras que deben de iniciar con mayúscula"
             
             desactivaBotones()
+            textForButton()
             
         }
         
@@ -157,6 +161,7 @@ class ViewControllerGame: UIViewController {
             buttonOpc3.setTitleColor(UIColor.white, for: UIControl.State.disabled)
             buttonOpc4.setTitleColor(UIColor.white, for: UIControl.State.disabled)
             
+            
         }else if difficulty == 2 {
             buttonMin.isEnabled = false
             buttonMayu.isEnabled = false
@@ -174,14 +179,39 @@ class ViewControllerGame: UIViewController {
         }
     }
     
-    /*func textForButton(){
+    //Función que asigna texto a los botones
+    func textForButton(){
+        
+        var optionsWords = [String]()
+        
         for i in toUseQuestionList[currQuestion].opciones{
-            for ip in opciones {
-                print(ip)
+            var wordProv: String = ""
+            for w in i {
+                wordProv += w + ", "
             }
+            optionsWords.append(wordProv)
         }
-    }*/
+        
+        //Se revuelve el arreglo que contiene las opciones de respuesta
+        optionsWords.shuffle()
+        
+        //Se asignan las opciones a los botones
+        buttonOpc1.setTitle(optionsWords[0], for: .normal)
+        buttonOpc2.setTitle(optionsWords[1], for: .normal)
+        buttonOpc3.setTitle(optionsWords[2], for: .normal)
+        buttonOpc4.setTitle(optionsWords[3], for: .normal)
+        print(optionsWords)
     
+    }
+    
+    //Función para calcular el Score final
+    func calcFinalScore() {
+        if gameMode == 1 {
+            finalScore = (score * 100) - (secondsFromTimer * 2)
+        } else if gameMode == 2 {
+            finalScore = score * 100
+        }
+    }
     
     
     
