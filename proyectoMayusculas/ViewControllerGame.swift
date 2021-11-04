@@ -89,7 +89,20 @@ class ViewControllerGame: UIViewController {
     }
     
     func showResults() {
-        let alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/\(toUseQuestionList.count) aciertos", preferredStyle: UIAlertController.Style.alert)
+        var alert : UIAlertController
+        if score == toUseQuestionList.count {
+            alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/\(toUseQuestionList.count) aciertos.\n¡Felicidades!", preferredStyle: UIAlertController.Style.alert)
+        }
+        else {
+            var rules : String = ""
+            for r in rulesToCheck {
+                rules = rules + "\(r),"
+            }
+            rules.remove(at: rules.index(before: rules.endIndex))
+            
+            alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/\(toUseQuestionList.count) aciertos\nRevisa la o las siguientes reglas: \(rules)"  , preferredStyle: UIAlertController.Style.alert)
+        }
+        
         
         let saveAction = UIAlertAction(title: "Guardar", style: UIAlertAction.Style.default, handler: nil)
         
