@@ -270,6 +270,7 @@ class ViewControllerGame: UIViewController {
             labelScore.text = "\(score)/\(toUseQuestionList.count)"
         }else{
             print("incorrect")
+            rulesToCheck.formUnion(toUseQuestionList[currQuestion].normas)
         }
         
         currQuestion += 1
