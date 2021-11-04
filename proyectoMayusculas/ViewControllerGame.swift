@@ -136,6 +136,7 @@ class ViewControllerGame: UIViewController {
         }
     }
     
+    //Función que cambia la configuración de los botones en pantalla dependiendo de la dificultad establecida
     func desactivaBotones(){
         if difficulty == 1 {
             buttonOpc1.isEnabled = false
