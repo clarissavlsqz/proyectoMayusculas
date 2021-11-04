@@ -240,6 +240,7 @@ class ViewControllerGame: UIViewController {
             for w in i {
                 wordProv += w + ", "
             }
+            wordProv = String(wordProv.dropLast(2))
             optionsWords.append(wordProv)
         }
         
@@ -248,6 +249,7 @@ class ViewControllerGame: UIViewController {
         for r in toUseQuestionList[currQuestion].respuesta{
             rightAnswer += r + ", "
         }
+        rightAnswer = String(rightAnswer.dropLast(2))
         print(rightAnswer)
         
         //Se revuelve el arreglo que contiene las opciones de respuesta
