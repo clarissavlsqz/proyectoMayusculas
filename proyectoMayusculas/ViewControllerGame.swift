@@ -42,7 +42,7 @@ class ViewControllerGame: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        print(modalidad)
+        //print(modalidad)
         ruta = Bundle.main.path(forResource: "Property List", ofType: "plist")
         
         getAllQuestions()
@@ -127,26 +127,32 @@ class ViewControllerGame: UIViewController {
         let defaults = UserDefaults.standard
         if let unwMod = modalidad{
             print("SE LOGRO WU " + unwMod)
-            if var arr = defaults.object(forKey: unwMod) as? [Int]{
+            if var arr = defaults.object(forKey: unwMod) as? [Puntaje]{
                 arr.sort(by: >)
                 if arr.count < 10{
-                    arr.append(finalScore)
+                    arr.append(Puntaje(jugador: "USER", puntos: finalScore))
                     arr.sort(by: >)
-                    defaults.set(arr, forKey: unwMod)
-                }else if finalScore > arr[arr.count-1]{
+                    if let encodedArr = try? JSONEncoder().encode(arr){
+                        defaults.set(encodedArr, forKey: unwMod)
+                    }
+                }else if finalScore > arr[arr.count-1].puntos{
                     //print(arr[arr.count-1])
                     arr.remove(at: arr.count-1)
                     //print(arr[arr.count-1])
-                    arr.append(finalScore)
+                    arr.append(Puntaje(jugador: "USER", puntos: finalScore))
                     //print(arr[arr.count-1])
                     arr.sort(by: >)
-                    defaults.set(arr, forKey: unwMod)
+                    if let encodedArr = try? JSONEncoder().encode(arr){
+                        defaults.set(encodedArr, forKey: unwMod)
+                    }
                 }
             }else{
-                var arr = [Int] ()
-                arr.append(finalScore)
+                var arr = [Puntaje] ()
+                arr.append(Puntaje(jugador: "USER", puntos: finalScore))
                 arr.sort(by: >)
-                defaults.set(arr, forKey: unwMod)
+                if let encodedArr = try? JSONEncoder().encode(arr){
+                    defaults.set(encodedArr, forKey: unwMod)
+                }
             }
             
         }
