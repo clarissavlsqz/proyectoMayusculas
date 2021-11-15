@@ -21,6 +21,7 @@ class ViewControllerGame: UIViewController {
     var secondsFromTimer: Int = 15
     var rightAnswer: String = ""
     var modalidad : String!
+    var username : String!
     
     @IBOutlet weak var labelInstruction: UILabel!
     @IBOutlet weak var labelQuestion: UILabel!
@@ -107,13 +108,23 @@ class ViewControllerGame: UIViewController {
             alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/\(toUseQuestionList.count) aciertos\nRevisa la o las siguientes reglas: \(rules)"  , preferredStyle: UIAlertController.Style.alert)
         }
         
-        
+        alert.addTextField()
         let saveAction = UIAlertAction(title: "Guardar", style: UIAlertAction.Style.default, handler: {(action:UIAlertAction!) in
             print("GUARDAR")
+            let firstTextField = alert.textFields![0] as UITextField
+            if let firstText = firstTextField.text{
+                if firstText != ""{
+                    self.username = firstText
+                }else{
+                    self.username = "USER"
+                }
+            }
             self.guardarDatos()
         })
         
         let cancelAction = UIAlertAction(title: "Salir", style: .cancel, handler: nil)
+        
+        //alert.addTextField()
         
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
@@ -127,32 +138,43 @@ class ViewControllerGame: UIViewController {
         let defaults = UserDefaults.standard
         if let unwMod = modalidad{
             print("SE LOGRO WU " + unwMod)
-            if var arr = defaults.object(forKey: unwMod) as? [Puntaje]{
-                arr.sort(by: >)
-                if arr.count < 10{
-                    arr.append(Puntaje(jugador: "USER", puntos: finalScore))
+            
+            
+            do {
+                if let storedObjItem = defaults.object(forKey: unwMod){
+                    let storedItems = try JSONDecoder().decode([Puntaje].self, from: storedObjItem as! Data)
+                    var arr = storedItems
                     arr.sort(by: >)
-                    if let encodedArr = try? JSONEncoder().encode(arr){
-                        defaults.set(encodedArr, forKey: unwMod)
+                    
+                    if arr.count < 10{
+                        arr.append(Puntaje(jugador: username, puntos: finalScore))
+                        arr.sort(by: >)
+                        if let encodedArr = try? JSONEncoder().encode(arr){
+                            defaults.set(encodedArr, forKey: unwMod)
+                        }
+                    }else if finalScore > arr[arr.count-1].puntos{
+                        //print(arr[arr.count-1])
+                        arr.remove(at: arr.count-1)
+                        //print(arr[arr.count-1])
+                        arr.append(Puntaje(jugador: username, puntos: finalScore))
+                        //print(arr[arr.count-1])
+                        arr.sort(by: >)
+                        if let encodedArr = try? JSONEncoder().encode(arr){
+                            defaults.set(encodedArr, forKey: unwMod)
+                        }
                     }
-                }else if finalScore > arr[arr.count-1].puntos{
-                    //print(arr[arr.count-1])
-                    arr.remove(at: arr.count-1)
-                    //print(arr[arr.count-1])
-                    arr.append(Puntaje(jugador: "USER", puntos: finalScore))
-                    //print(arr[arr.count-1])
+                    
+                }else{
+                    var arr = [Puntaje] ()
+                    arr.append(Puntaje(jugador: username, puntos: finalScore))
                     arr.sort(by: >)
                     if let encodedArr = try? JSONEncoder().encode(arr){
                         defaults.set(encodedArr, forKey: unwMod)
                     }
                 }
-            }else{
-                var arr = [Puntaje] ()
-                arr.append(Puntaje(jugador: "USER", puntos: finalScore))
-                arr.sort(by: >)
-                if let encodedArr = try? JSONEncoder().encode(arr){
-                    defaults.set(encodedArr, forKey: unwMod)
-                }
+                //print("Retrieved items: \(storedItems)")
+            } catch let err {
+                print(err)
             }
             
         }
