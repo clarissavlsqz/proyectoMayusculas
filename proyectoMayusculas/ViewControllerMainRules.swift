@@ -9,14 +9,119 @@ import UIKit
 
 class ViewControllerMainRules: UIViewController {
     
+    @IBOutlet weak var whiteView: UIView!
+    
+    @IBOutlet weak var buttonR1: UIButton!
+    @IBOutlet weak var buttonR2: UIButton!
+    @IBOutlet weak var buttonR3: UIButton!
+    @IBOutlet weak var buttonR4: UIButton!
+    @IBOutlet weak var buttonR5: UIButton!
+    @IBOutlet weak var buttonR6: UIButton!
+    @IBOutlet weak var buttonR7: UIButton!
+    @IBOutlet weak var buttonR8: UIButton!
+    @IBOutlet weak var buttonR9: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        whiteView.layer.cornerRadius = 10
+        whiteView.layer.shadowColor = UIColor.black.cgColor
+        whiteView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        whiteView.layer.shadowOpacity = 0.7
+        whiteView.layer.shadowRadius = 4.0
+        
+        buttonR1.layer.cornerRadius = 5
+        buttonR2.layer.cornerRadius = 5
+        buttonR3.layer.cornerRadius = 5
+        buttonR4.layer.cornerRadius = 5
+        buttonR5.layer.cornerRadius = 5
+        buttonR6.layer.cornerRadius = 5
+        buttonR7.layer.cornerRadius = 5
+        buttonR8.layer.cornerRadius = 5
+        buttonR9.layer.cornerRadius = 5
+        
+        buttonR1.layer.shadowColor = UIColor.black.cgColor
+        buttonR1.layer.shadowOffset = CGSize(width: 0, height: 0)
+        buttonR1.layer.shadowOpacity = 0.2
+        buttonR1.layer.shadowRadius = 2.0
+        
+        buttonR2.layer.shadowColor = UIColor.black.cgColor
+        buttonR2.layer.shadowOffset = CGSize(width: 0, height: 0)
+        buttonR2.layer.shadowOpacity = 0.2
+        buttonR2.layer.shadowRadius = 2.0
+        
+        buttonR3.layer.shadowColor = UIColor.black.cgColor
+        buttonR3.layer.shadowOffset = CGSize(width: 0, height: 0)
+        buttonR3.layer.shadowOpacity = 0.2
+        buttonR3.layer.shadowRadius = 2.0
+        
+        buttonR4.layer.shadowColor = UIColor.black.cgColor
+        buttonR4.layer.shadowOffset = CGSize(width: 0, height: 0)
+        buttonR4.layer.shadowOpacity = 0.2
+        buttonR4.layer.shadowRadius = 2.0
+        
+        buttonR5.layer.shadowColor = UIColor.black.cgColor
+        buttonR5.layer.shadowOffset = CGSize(width: 0, height: 0)
+        buttonR5.layer.shadowOpacity = 0.2
+        buttonR5.layer.shadowRadius = 2.0
+        
+        buttonR6.layer.shadowColor = UIColor.black.cgColor
+        buttonR6.layer.shadowOffset = CGSize(width: 0, height: 0)
+        buttonR6.layer.shadowOpacity = 0.2
+        buttonR6.layer.shadowRadius = 2.0
+        
+        buttonR7.layer.shadowColor = UIColor.black.cgColor
+        buttonR7.layer.shadowOffset = CGSize(width: 0, height: 0)
+        buttonR7.layer.shadowOpacity = 0.2
+        buttonR7.layer.shadowRadius = 2.0
+        
+        buttonR8.layer.shadowColor = UIColor.black.cgColor
+        buttonR8.layer.shadowOffset = CGSize(width: 0, height: 0)
+        buttonR8.layer.shadowOpacity = 0.2
+        buttonR8.layer.shadowRadius = 2.0
+        
+        buttonR9.layer.shadowColor = UIColor.black.cgColor
+        buttonR9.layer.shadowOffset = CGSize(width: 0, height: 0)
+        buttonR9.layer.shadowOpacity = 0.2
+        buttonR9.layer.shadowRadius = 2.0
+        
+        buttonR1.addTarget(self, action: #selector(holdDown), for: .touchDown)
+        buttonR1.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+        
+        buttonR2.addTarget(self, action: #selector(holdDown), for: .touchDown)
+        buttonR2.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+        
+        buttonR3.addTarget(self, action: #selector(holdDown), for: .touchDown)
+        buttonR3.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+        
+        buttonR4.addTarget(self, action: #selector(holdDown), for: .touchDown)
+        buttonR4.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+        
+        buttonR5.addTarget(self, action: #selector(holdDown), for: .touchDown)
+        buttonR5.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+        
+        buttonR6.addTarget(self, action: #selector(holdDown), for: .touchDown)
+        buttonR6.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+        
+        buttonR7.addTarget(self, action: #selector(holdDown), for: .touchDown)
+        buttonR7.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+        
+        buttonR8.addTarget(self, action: #selector(holdDown), for: .touchDown)
+        buttonR8.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+        
+        buttonR9.addTarget(self, action: #selector(holdDown), for: .touchDown)
+        buttonR9.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
 
         // Do any additional setup after loading the view.
     }
     
-
+    @objc func holdDown(sender : UIButton) {
+        sender.backgroundColor = UIColor(red: 0.70, green: 0.67, blue: 0.83, alpha: 1.00)
+    }
+    
+    @objc func holdRelease(sender : UIButton) {
+        sender.backgroundColor = UIColor(red: 0.86, green: 0.82, blue: 1.00, alpha: 1.00)
+    }
     
     // MARK: - Navigation
 
