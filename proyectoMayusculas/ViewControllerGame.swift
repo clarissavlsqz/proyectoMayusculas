@@ -45,6 +45,7 @@ class ViewControllerGame: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor =  UIColor.white
         // Do any additional setup after loading the view.
         imagePurpleBg.clipsToBounds = false
         imagePurpleBg.layer.shadowColor = UIColor.black.cgColor

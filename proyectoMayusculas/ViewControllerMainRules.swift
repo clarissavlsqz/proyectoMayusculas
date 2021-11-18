@@ -24,6 +24,8 @@ class ViewControllerMainRules: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor =  UIColor.white
+        
         whiteView.layer.cornerRadius = 10
         whiteView.layer.shadowColor = UIColor.black.cgColor
         whiteView.layer.shadowOffset = CGSize(width: 0, height: 0)
