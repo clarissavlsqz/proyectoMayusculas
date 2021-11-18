@@ -11,6 +11,7 @@ class ViewControllerGame: UIViewController {
     
     var gameMode : Int!
     var difficulty : Int!
+    var numQ = 1
     var ruta : String!
     var allQuestionList = [Pregunta]()
     var toUseQuestionList = [Pregunta]()
@@ -34,6 +35,9 @@ class ViewControllerGame: UIViewController {
     @IBOutlet weak var buttonOpc3: UIButton!
     @IBOutlet weak var buttonOpc4: UIButton!
     
+    @IBOutlet weak var imagePurpleBg: UIImageView!
+    @IBOutlet weak var viewContainer: UIView!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -42,7 +46,23 @@ class ViewControllerGame: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        imagePurpleBg.clipsToBounds = false
+        imagePurpleBg.layer.shadowColor = UIColor.black.cgColor
+        imagePurpleBg.layer.shadowOpacity = 1
+        imagePurpleBg.layer.shadowOffset = CGSize.zero
+        imagePurpleBg.layer.shadowRadius = 10
+        imagePurpleBg.layer.shadowPath = UIBezierPath(roundedRect: imagePurpleBg.bounds, cornerRadius: 10).cgPath
         
+        viewContainer.layer.cornerRadius = 10
+        viewContainer.layer.shadowColor = UIColor.black.cgColor
+        viewContainer.layer.shadowOffset = CGSize(width: 0, height: 0)
+        viewContainer.layer.shadowOpacity = 0.7
+        viewContainer.layer.shadowRadius = 4.0
+        //viewContainer.layer.shadowPath = UIBezierPath(rect: viewContainer.bounds).cgPath
+        
+        progressBar.progress = 0.0
+        
+
         //print(modalidad)
         ruta = Bundle.main.path(forResource: "Property List", ofType: "plist")
         
@@ -53,6 +73,13 @@ class ViewControllerGame: UIViewController {
         labelScore.text = "0/\(toUseQuestionList.count)"
     }
     
+    @objc func holdDown(sender : UIButton) {
+        sender.layer.borderColor = CGColor(red: 0.46, green: 0.09, blue: 0.59, alpha: 1.00)
+    }
+    
+    @objc func holdRelease(sender : UIButton) {
+        sender.layer.borderColor = CGColor(red: 0.87, green: 0.84, blue: 0.94, alpha: 1.00)
+    }
     
     func getAllQuestions() {
         do {
@@ -183,14 +210,17 @@ class ViewControllerGame: UIViewController {
     @IBAction func pressedMin(_ sender: UIButton) {
         if toUseQuestionList[currQuestion].respuesta[0] == "min" {
             score += 1
+            progressBar.progressTintColor = UIColor.green
             print("correct")
             labelScore.text = "\(score)/\(toUseQuestionList.count)"
         }
         else {
             rulesToCheck.formUnion(toUseQuestionList[currQuestion].normas)
+            progressBar.progressTintColor = UIColor.red
         }
         
         currQuestion += 1
+        progressBar.progress = Float(currQuestion) / Float(toUseQuestionList.count)
         if (currQuestion < toUseQuestionList.count) {
             newQuestion()
         }
@@ -205,12 +235,15 @@ class ViewControllerGame: UIViewController {
         if toUseQuestionList[currQuestion].respuesta[0] == "mayu" {
             score += 1
             print("correct")
+            progressBar.progressTintColor = UIColor.green
             labelScore.text = "\(score)/\(toUseQuestionList.count)"
         }
         else {
             rulesToCheck.formUnion(toUseQuestionList[currQuestion].normas)
+            progressBar.progressTintColor = UIColor.red
         }
         currQuestion += 1
+        progressBar.progress = Float(currQuestion) / Float(toUseQuestionList.count)
         if (currQuestion < toUseQuestionList.count) {
             newQuestion()
         }
@@ -222,6 +255,18 @@ class ViewControllerGame: UIViewController {
     //Función que cambia la configuración de los botones en pantalla dependiendo de la dificultad establecida
     func desactivaBotones(){
         if difficulty == 1 {
+            buttonMin.layer.cornerRadius = 10
+            buttonMayu.layer.cornerRadius = 10
+            buttonMin.layer.borderColor = CGColor(red: 0.87, green: 0.84, blue: 0.94, alpha: 1.00)
+            buttonMayu.layer.borderColor = CGColor(red: 0.87, green: 0.84, blue: 0.94, alpha: 1.00)
+            buttonMin.layer.borderWidth = 2.5
+            buttonMayu.layer.borderWidth = 2.5
+            buttonMin.addTarget(self, action: #selector(holdDown), for: .touchDown)
+            buttonMin.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+            buttonMayu.addTarget(self, action: #selector(holdDown), for: .touchDown)
+            buttonMayu.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+            
+            
             buttonOpc1.isEnabled = false
             buttonOpc2.isEnabled = false
             buttonOpc3.isEnabled = false
@@ -235,10 +280,10 @@ class ViewControllerGame: UIViewController {
             buttonOpc3.backgroundColor = .none
             buttonOpc4.backgroundColor = .none
             
-            buttonOpc1.setTitleColor(UIColor.white, for: UIControl.State.disabled)
-            buttonOpc2.setTitleColor(UIColor.white, for: UIControl.State.disabled)
-            buttonOpc3.setTitleColor(UIColor.white, for: UIControl.State.disabled)
-            buttonOpc4.setTitleColor(UIColor.white, for: UIControl.State.disabled)
+            buttonOpc1.setTitleColor(UIColor.clear, for: UIControl.State.disabled)
+            buttonOpc2.setTitleColor(UIColor.clear, for: UIControl.State.disabled)
+            buttonOpc3.setTitleColor(UIColor.clear, for: UIControl.State.disabled)
+            buttonOpc4.setTitleColor(UIColor.clear, for: UIControl.State.disabled)
             
             
         }else if difficulty == 2 {
@@ -253,8 +298,34 @@ class ViewControllerGame: UIViewController {
             buttonMin.backgroundColor = .none
             buttonMayu.backgroundColor = .none
             
-            buttonMin.setTitleColor(UIColor.white, for: UIControl.State.disabled)
-            buttonMayu.setTitleColor(UIColor.white, for: UIControl.State.disabled)
+            buttonMin.setTitleColor(UIColor.clear, for: UIControl.State.disabled)
+            buttonMayu.setTitleColor(UIColor.clear, for: UIControl.State.disabled)
+            
+            buttonOpc1.layer.cornerRadius = 10
+            buttonOpc1.layer.borderColor = CGColor(red: 0.87, green: 0.84, blue: 0.94, alpha: 1.00)
+            buttonOpc1.layer.borderWidth = 2.5
+            buttonOpc1.addTarget(self, action: #selector(holdDown), for: .touchDown)
+            buttonOpc1.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+            
+            buttonOpc2.layer.cornerRadius = 10
+            buttonOpc2.layer.borderColor = CGColor(red: 0.87, green: 0.84, blue: 0.94, alpha: 1.00)
+            buttonOpc2.layer.borderWidth = 2.5
+            buttonOpc2.addTarget(self, action: #selector(holdDown), for: .touchDown)
+            buttonOpc2.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+            
+            buttonOpc3.layer.cornerRadius = 10
+            buttonOpc3.layer.borderColor = CGColor(red: 0.87, green: 0.84, blue: 0.94, alpha: 1.00)
+            buttonOpc3.layer.borderWidth = 2.5
+            buttonOpc3.addTarget(self, action: #selector(holdDown), for: .touchDown)
+            buttonOpc3.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+            
+            buttonOpc4.layer.cornerRadius = 10
+            buttonOpc4.layer.borderColor = CGColor(red: 0.87, green: 0.84, blue: 0.94, alpha: 1.00)
+            buttonOpc4.layer.borderWidth = 2.5
+            buttonOpc4.addTarget(self, action: #selector(holdDown), for: .touchDown)
+            buttonOpc4.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+            
+            
         }
     }
     
@@ -297,13 +368,16 @@ class ViewControllerGame: UIViewController {
         if(sender.titleLabel?.text == rightAnswer) {
             score += 1
             print("correct")
+            progressBar.progressTintColor = UIColor.green
             labelScore.text = "\(score)/\(toUseQuestionList.count)"
         }else{
             print("incorrect")
             rulesToCheck.formUnion(toUseQuestionList[currQuestion].normas)
+            progressBar.progressTintColor = UIColor.red
         }
         
         currQuestion += 1
+        progressBar.progress = Float(currQuestion) / Float(toUseQuestionList.count)
         if (currQuestion < toUseQuestionList.count) {
             newQuestion()
         }
