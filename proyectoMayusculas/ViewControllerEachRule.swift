@@ -12,6 +12,7 @@ class ViewControllerEachRule: UIViewController {
     
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbNorma: UILabel!
+    @IBOutlet weak var whiteView: UIView!
     
     var titleNorma : String!
     var norma : String!
@@ -21,6 +22,12 @@ class ViewControllerEachRule: UIViewController {
         
         lbTitle.text = titleNorma
         lbNorma.text = norma
+                
+        whiteView.layer.cornerRadius = 10
+        whiteView.layer.shadowColor = UIColor.black.cgColor
+        whiteView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        whiteView.layer.shadowOpacity = 0.2
+        whiteView.layer.shadowRadius = 2.0
         
     }
     
