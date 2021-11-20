@@ -401,12 +401,13 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FHF-Ut-0gg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.8862745098" green="0.84705882349999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="L2q-d0-Mzd"/>
                     <connections>
                         <outlet property="imageLogo" destination="pNN-dc-7Hi" id="Fhp-7Y-WLH"/>
                         <outlet property="labelInfo" destination="TlZ-Vv-lzh" id="dOk-NY-dBO"/>
+                        <outlet property="labelTitle" destination="Ebf-gJ-5Qk" id="pSA-nh-WSL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NG5-FA-AQR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
