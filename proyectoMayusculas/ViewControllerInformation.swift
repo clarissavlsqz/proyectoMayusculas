@@ -17,13 +17,17 @@ class ViewControllerInformation: UIViewController {
     let attrs = [NSAttributedString.Key.font: UIFont.italicSystemFont(ofSize: 12)]
     
     
+    @IBOutlet weak var labelTitle: UILabel!
     
     @IBOutlet weak var imageLogo: UIImageView!
     @IBOutlet weak var labelInfo: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        labelTitle.layer.shadowColor = UIColor.black.cgColor
+        labelTitle.layer.shadowOffset = CGSize(width: 0, height: 0)
+        labelTitle.layer.shadowOpacity = 0.1
+        labelTitle.layer.shadowRadius = 2.5
         attributeText()
         // Do any additional setup after loading the view.
     }

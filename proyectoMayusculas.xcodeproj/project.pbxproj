@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04064D642740B96D0080BAD3 /* ViewControllerTablas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04064D632740B96D0080BAD3 /* ViewControllerTablas.swift */; };
+		04064D672740C1F80080BAD3 /* Puntaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04064D662740C1F80080BAD3 /* Puntaje.swift */; };
+		048B75912740CB47004A2080 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B75902740CB47004A2080 /* TableViewCell.swift */; };
+		6E02766C27499EE600DA36C8 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E02766B27499EE600DA36C8 /* CircularProgressBarView.swift */; };
 		6E1CECA3270BAB0200228449 /* ViewControllerMainRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1CECA2270BAB0200228449 /* ViewControllerMainRules.swift */; };
 		6E1CECA6270BAB6100228449 /* ViewControllerInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1CECA5270BAB6100228449 /* ViewControllerInformation.swift */; };
 		6E1CECA9270BAB9D00228449 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1CECA8270BAB9D00228449 /* TableViewController.swift */; };
@@ -26,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04064D632740B96D0080BAD3 /* ViewControllerTablas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTablas.swift; sourceTree = "<group>"; };
+		04064D662740C1F80080BAD3 /* Puntaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puntaje.swift; sourceTree = "<group>"; };
+		048B75902740CB47004A2080 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		6E02766B27499EE600DA36C8 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
 		6E1CECA2270BAB0200228449 /* ViewControllerMainRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMainRules.swift; sourceTree = "<group>"; };
 		6E1CECA5270BAB6100228449 /* ViewControllerInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInformation.swift; sourceTree = "<group>"; };
 		6E1CECA8270BAB9D00228449 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +88,9 @@
 				6E2F498627062F3C00513209 /* SceneDelegate.swift */,
 				6E2F498827062F3C00513209 /* ViewController.swift */,
 				6E2F498A27062F3C00513209 /* Main.storyboard */,
+				6E02766B27499EE600DA36C8 /* CircularProgressBarView.swift */,
+				04064D662740C1F80080BAD3 /* Puntaje.swift */,
+				04064D632740B96D0080BAD3 /* ViewControllerTablas.swift */,
 				6EE400CD27168FD40003459B /* ViewControllerGame.swift */,
 				6EE400C62715B61B0003459B /* ViewControllerDifficulty.swift */,
 				6E1CECAB270BABC000228449 /* ViewControllerGameMode.swift */,
@@ -93,6 +104,7 @@
 				6E2F498F27062F3D00513209 /* LaunchScreen.storyboard */,
 				6E2F499227062F3D00513209 /* Info.plist */,
 				A08F249E27339A8F00A8038C /* ViewControllerUserName.swift */,
+				048B75902740CB47004A2080 /* TableViewCell.swift */,
 			);
 			path = proyectoMayusculas;
 			sourceTree = "<group>";
@@ -168,7 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048B75912740CB47004A2080 /* TableViewCell.swift in Sources */,
 				6EE400CE27168FD40003459B /* ViewControllerGame.swift in Sources */,
+				6E02766C27499EE600DA36C8 /* CircularProgressBarView.swift in Sources */,
+				04064D672740C1F80080BAD3 /* Puntaje.swift in Sources */,
 				6E2F498927062F3C00513209 /* ViewController.swift in Sources */,
 				6E1CECA9270BAB9D00228449 /* TableViewController.swift in Sources */,
 				6E2F498527062F3C00513209 /* AppDelegate.swift in Sources */,
@@ -178,6 +193,7 @@
 				6E2F498727062F3C00513209 /* SceneDelegate.swift in Sources */,
 				6E1CECA3270BAB0200228449 /* ViewControllerMainRules.swift in Sources */,
 				A06A7B4927175B8A0008EC65 /* ViewControllerEachRule.swift in Sources */,
+				04064D642740B96D0080BAD3 /* ViewControllerTablas.swift in Sources */,
 				6E9B84E0271177100001083E /* Pregunta.swift in Sources */,
 				6EE400C72715B61B0003459B /* ViewControllerDifficulty.swift in Sources */,
 			);
