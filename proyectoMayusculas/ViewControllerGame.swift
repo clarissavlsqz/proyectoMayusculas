@@ -98,10 +98,11 @@ class ViewControllerGame: UIViewController {
                 toUseQuestionList.append(q)
             }
         }
+        toUseQuestionList.shuffle()
     }
     
     func newQuestion() {
-        if difficulty == 1 {
+        if toUseQuestionList[currQuestion].tipo == 1 {
             labelInstruction.text = "Seleccione si la palabra debe iniciar con mayúscula o minúscula"
             buttonMin.setTitle("minúscula", for: .normal)
             buttonMayu.setTitle("mayúscula", for: .normal)
@@ -109,7 +110,7 @@ class ViewControllerGame: UIViewController {
             desactivaBotones()
             
         }
-        else if difficulty == 2 {
+        else if toUseQuestionList[currQuestion].tipo == 2 {
             labelInstruction.text = "Seleccione las palabras que deben de iniciar con mayúscula"
             
             desactivaBotones()
@@ -253,9 +254,9 @@ class ViewControllerGame: UIViewController {
         }
     }
     
-    //Función que cambia la configuración de los botones en pantalla dependiendo de la dificultad establecida
+    //Función que cambia la configuración de los botones en pantalla dependiendo del tipo establecido
     func desactivaBotones(){
-        if difficulty == 1 {
+        if toUseQuestionList[currQuestion].tipo == 1 {
             buttonMin.layer.cornerRadius = 10
             buttonMayu.layer.cornerRadius = 10
             buttonMin.layer.borderColor = CGColor(red: 0.87, green: 0.84, blue: 0.94, alpha: 1.00)
@@ -286,8 +287,19 @@ class ViewControllerGame: UIViewController {
             buttonOpc3.setTitleColor(UIColor.clear, for: UIControl.State.disabled)
             buttonOpc4.setTitleColor(UIColor.clear, for: UIControl.State.disabled)
             
+            buttonOpc1.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
+            buttonOpc2.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
+            buttonOpc3.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
+            buttonOpc4.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
             
-        }else if difficulty == 2 {
+            buttonOpc1.layer.borderWidth = 0
+            buttonOpc2.layer.borderWidth = 0
+            buttonOpc3.layer.borderWidth = 0
+            buttonOpc4.layer.borderWidth = 0
+
+            
+        }
+        else if toUseQuestionList[currQuestion].tipo == 2 {
             buttonMin.isEnabled = false
             buttonMayu.isEnabled = false
             
@@ -301,6 +313,12 @@ class ViewControllerGame: UIViewController {
             
             buttonMin.setTitleColor(UIColor.clear, for: UIControl.State.disabled)
             buttonMayu.setTitleColor(UIColor.clear, for: UIControl.State.disabled)
+            
+            buttonMin.layer.borderColor = UIColor.clear.cgColor
+            buttonMayu.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
+            buttonMin.layer.borderWidth = 0
+            buttonMayu.layer.borderWidth = 0
+            //buttonMin.frame = CGRect(x: 390, y: 423, width: 270, height: 53)
             
             buttonOpc1.layer.cornerRadius = 10
             buttonOpc1.layer.borderColor = CGColor(red: 0.87, green: 0.84, blue: 0.94, alpha: 1.00)

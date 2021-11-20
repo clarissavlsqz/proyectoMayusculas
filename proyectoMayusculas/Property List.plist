@@ -121,7 +121,7 @@
 			<integer>8</integer>
 		</array>
 		<key>tipo</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>dificultad</key>
 		<integer>2</integer>
 		<key>respuesta</key>
@@ -138,10 +138,10 @@
 		<key>opciones</key>
 		<array>
 			<array>
-				<string>monterrey</string>
-				<string>leon</string>
-				<string>nuevo</string>
 				<string>la</string>
+				<string>nuevo</string>
+				<string>león</string>
+				<string>monterrey</string>
 			</array>
 			<array>
 				<string>la</string>
@@ -167,15 +167,15 @@
 			<integer>1</integer>
 		</array>
 		<key>tipo</key>
-		<integer>1</integer>
-		<key>dificultad</key>
 		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
 		<key>respuesta</key>
 		<array>
-			<string>monterrey</string>
-			<string>leon</string>
-			<string>nuevo</string>
 			<string>la</string>
+			<string>nuevo</string>
+			<string>león</string>
+			<string>monterrey</string>
 		</array>
 		<key>enunciado</key>
 		<string>la capital de nuevo león es monterrey.</string>
@@ -206,9 +206,9 @@
 			<integer>1</integer>
 		</array>
 		<key>tipo</key>
-		<integer>1</integer>
-		<key>dificultad</key>
 		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
 		<key>respuesta</key>
 		<array>
 			<string>méxico</string>
@@ -250,9 +250,9 @@
 			<integer>2</integer>
 		</array>
 		<key>tipo</key>
-		<integer>1</integer>
-		<key>dificultad</key>
 		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
 		<key>respuesta</key>
 		<array>
 			<string>salud</string>
@@ -290,12 +290,11 @@
 			<integer>9</integer>
 		</array>
 		<key>tipo</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>dificultad</key>
 		<integer>2</integer>
 		<key>respuesta</key>
 		<array>
-			<string>https://docs.google.com</string>
 			<string>la</string>
 		</array>
 		<key>enunciado</key>
@@ -331,9 +330,9 @@
 			<integer>1</integer>
 		</array>
 		<key>tipo</key>
-		<integer>1</integer>
-		<key>dificultad</key>
 		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
 		<key>respuesta</key>
 		<array>
 			<string>oro</string>
@@ -370,7 +369,210 @@
 			<integer>2</integer>
 		</array>
 		<key>tipo</key>
+		<integer>2</integer>
+		<key>dificultad</key>
 		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>la</string>
+		</array>
+		<key>enunciado</key>
+		<string>la barca en que me iré lleva una cruz de olvido.</string>
+	</dict>
+	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>el</string>
+				<string>biden</string>
+			</array>
+			<array>
+				<string>el </string>
+				<string>embajadores</string>
+				<string>biden</string>
+			</array>
+			<array>
+				<string>el</string>
+				<string>presidente</string>
+				<string>biden</string>
+				<string>embajadores</string>
+			</array>
+			<array>
+				<string>el</string>
+				<string>presidente</string>
+				<string>mañana</string>
+			</array>
+		</array>
+		<key>normas</key>
+		<array>
+			<integer>1</integer>
+			<integer>2</integer>
+		</array>
+		<key>tipo</key>
+		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>2</integer>
+		<key>respuesta</key>
+		<array>
+			<string>biden</string>
+			<string>el</string>
+		</array>
+		<key>enunciado</key>
+		<string>el presidente biden recibirá a los embajadores el día de mañana.</string>
+	</dict>
+	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>el</string>
+				<string>leal</string>
+			</array>
+			<array>
+				<string>el </string>
+				<string>doctor</string>
+				<string>leal</string>
+			</array>
+			<array>
+				<string>el</string>
+				<string>doctor</string>
+				<string>leal</string>
+				<string>sábado</string>
+			</array>
+			<array>
+				<string>el</string>
+				<string>leal</string>
+				<string>sábado</string>
+			</array>
+		</array>
+		<key>normas</key>
+		<array>
+			<integer>1</integer>
+			<integer>2</integer>
+			<integer>7</integer>
+		</array>
+		<key>tipo</key>
+		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>2</integer>
+		<key>respuesta</key>
+		<array>
+			<string>el</string>
+			<string>leal</string>
+		</array>
+		<key>enunciado</key>
+		<string>el doctor leal verá al paciente el sábado</string>
+	</dict>
+	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>el</string>
+				<string>dr.</string>
+				<string>leal</string>
+			</array>
+			<array>
+				<string>el </string>
+				<string>dr.</string>
+			</array>
+			<array>
+				<string>el</string>
+				<string>dr.</string>
+				<string>leal</string>
+				<string>sábado</string>
+			</array>
+			<array>
+				<string>el</string>
+				<string>leal</string>
+				<string>sábado</string>
+			</array>
+		</array>
+		<key>normas</key>
+		<array>
+			<integer>1</integer>
+			<integer>2</integer>
+			<integer>7</integer>
+		</array>
+		<key>tipo</key>
+		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>2</integer>
+		<key>respuesta</key>
+		<array>
+			<string>el</string>
+			<string>dr.</string>
+			<string>leal</string>
+		</array>
+		<key>enunciado</key>
+		<string>el dr. leal verá al paciente el sábado</string>
+	</dict>
+	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>llegó</string>
+				<string>el (segundo)</string>
+				<string>salvador</string>
+			</array>
+			<array>
+				<string>el (segundo)</string>
+				<string>salvador</string>
+			</array>
+			<array>
+				<string>llegó</string>
+				<string>el</string>
+				<string>el</string>
+				<string>salvador</string>
+			</array>
+			<array>
+				<string>llegó</string>
+				<string>el (primero)</string>
+				<string>salvador</string>
+			</array>
+		</array>
+		<key>normas</key>
+		<array>
+			<integer>1</integer>
+			<integer>2</integer>
+		</array>
+		<key>tipo</key>
+		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>llegó</string>
+			<string>el (segundo)</string>
+			<string>salvador</string>
+		</array>
+		<key>enunciado</key>
+		<string>llegó el visitante de el salvador.</string>
+	</dict>
+	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>la</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>península</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>itálica</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>península</string>
+				<string>itálica</string>
+			</array>
+		</array>
+		<key>normas</key>
+		<array>
+			<integer>2</integer>
+		</array>
+		<key>tipo</key>
+		<integer>2</integer>
 		<key>dificultad</key>
 		<integer>2</integer>
 		<key>respuesta</key>
@@ -378,7 +580,406 @@
 			<string>la</string>
 		</array>
 		<key>enunciado</key>
-		<string>la barca en que me iré lleva una cruz de olvido.</string>
+		<string>la península itálica tiene forma de bota.</string>
+	</dict>
+	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>la</string>
+				<string>yucatán</string>
+			</array>
+			<array>
+				<string>la</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>península</string>
+				<string>yucatán</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>península</string>
+				<string>yucatán</string>
+				<string>riquezas</string>
+			</array>
+		</array>
+		<key>normas</key>
+		<array>
+			<integer>1</integer>
+			<integer>2</integer>
+		</array>
+		<key>tipo</key>
+		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>la</string>
+			<string>yucatán</string>
+		</array>
+		<key>enunciado</key>
+		<string>la península de yucatán cuenta con riquezas naturales dignas de visitarse</string>
+	</dict>
+	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>don</string>
+				<string>mario</string>
+				<string>molina</string>
+				<string>premio</string>
+				<string>nobel</string>
+				<string>química</string>
+			</array>
+			<array>
+				<string>don</string>
+				<string>mario</string>
+				<string>molina</string>
+				<string>nobel</string>
+			</array>
+			<array>
+				<string>don</string>
+				<string>mario</string>
+				<string>molina</string>
+				<string>premio</string>
+				<string>nobel</string>
+			</array>
+			<array>
+				<string>don</string>
+				<string>mario</string>
+				<string>premio</string>
+				<string>nobel</string>
+				<string>de</string>
+				<string>química</string>
+			</array>
+		</array>
+		<key>normas</key>
+		<array>
+			<integer>1</integer>
+			<integer>2</integer>
+			<integer>11</integer>
+		</array>
+		<key>tipo</key>
+		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>2</integer>
+		<key>respuesta</key>
+		<array>
+			<string>don</string>
+			<string>mario</string>
+			<string>molina</string>
+			<string>premio</string>
+			<string>nobel</string>
+			<string>química</string>
+		</array>
+		<key>enunciado</key>
+		<string>don mario molina fue un mexicano que ganó el premio nobel de química en 1995</string>
+	</dict>
+	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>la</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>premio</string>
+				<string>nobel</string>
+				<string>química</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>premio</string>
+				<string>nobel</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>premio</string>
+				<string>nobel</string>
+				<string>química</string>
+				<string>mexicano</string>
+			</array>
+		</array>
+		<key>normas</key>
+		<array>
+			<integer>2</integer>
+			<integer>3</integer>
+		</array>
+		<key>tipo</key>
+		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>2</integer>
+		<key>respuesta</key>
+		<array>
+			<string>la</string>
+		</array>
+		<key>enunciado</key>
+		<string>la revista publicó una entrevista que hicieron al premio nobel de química mexicano.</string>
+	</dict>
+	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>la</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>oscar</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>actriz</string>
+				<string>oscar</string>
+			</array>
+			<array>
+				<string>la</string>
+				<string>actriz</string>
+				<string>oscar</string>
+			</array>
+		</array>
+		<key>normas</key>
+		<array>
+			<integer>2</integer>
+			<integer>3</integer>
+		</array>
+		<key>tipo</key>
+		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>2</integer>
+		<key>respuesta</key>
+		<array>
+			<string>la</string>
+		</array>
+		<key>enunciado</key>
+		<string>la actriz posó junto a su oscar.</string>
+	</dict>
+	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>el</string>
+				<string>el</string>
+				<string>norte</string>
+				<string>monterrey</string>
+			</array>
+			<array>
+				<string>el (primero)</string>
+				<string>monterrey</string>
+			</array>
+			<array>
+				<string>el (primero)</string>
+				<string>norte</string>
+				<string>monterrey</string>
+			</array>
+			<array>
+				<string>el</string>
+				<string>el</string>
+				<string>norte</string>
+			</array>
+		</array>
+		<key>normas</key>
+		<array>
+			<integer>1</integer>
+			<integer>2</integer>
+			<integer>12</integer>
+		</array>
+		<key>tipo</key>
+		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>el</string>
+			<string>el</string>
+			<string>norte</string>
+			<string>monterrey</string>
+		</array>
+		<key>enunciado</key>
+		<string>el periódico el norte es originario de monterrey</string>
+	</dict>
+	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>cuáles</string>
+				<string>europa</string>
+				<string>este</string>
+			</array>
+			<array>
+				<string>cuáles</string>
+				<string>europa</string>
+			</array>
+			<array>
+				<string>cuáles</string>
+				<string>europa</string>
+				<string>del</string>
+				<string>este</string>
+			</array>
+			<array>
+				<string>cuáles</string>
+				<string>del</string>
+				<string>este</string>
+			</array>
+		</array>
+		<key>normas</key>
+		<array>
+			<integer>1</integer>
+			<integer>2</integer>
+			<integer>12</integer>
+		</array>
+		<key>tipo</key>
+		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>2</integer>
+		<key>respuesta</key>
+		<array>
+			<string>cuáles</string>
+			<string>europa</string>
+			<string>este</string>
+		</array>
+		<key>enunciado</key>
+		<string>¿cuáles son los países que conforman europa del este?</string>
+	</dict>
+	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>no se necesita mayúscula</string>
+			</array>
+			<array>
+				<string>porque</string>
+				<string>cielito</string>
+				<string>lindo</string>
+			</array>
+			<array>
+				<string>cielito</string>
+				<string>lindo</string>
+			</array>
+			<array>
+				<string>porque</string>
+				<string>cielito</string>
+				<string>lindo</string>
+				<string>corazones</string>
+			</array>
+		</array>
+		<key>normas</key>
+		<array>
+			<integer>5</integer>
+		</array>
+		<key>tipo</key>
+		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>no se necesita mayúscula</string>
+		</array>
+		<key>enunciado</key>
+		<string>&quot;... porque cantando se alegran, cielito lindo, los corazones&quot;</string>
+	</dict>
+	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>no se necesita mayúscula</string>
+			</array>
+			<array>
+				<string>receta</string>
+				<string>buena</string>
+				<string>cocina</string>
+			</array>
+			<array>
+				<string>100</string>
+				<string>recetas</string>
+			</array>
+			<array>
+				<string>recetas</string>
+			</array>
+		</array>
+		<key>normas</key>
+		<array>
+			<integer>6</integer>
+		</array>
+		<key>tipo</key>
+		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>2</integer>
+		<key>respuesta</key>
+		<array>
+			<string>no se necesita mayúscula</string>
+		</array>
+		<key>enunciado</key>
+		<string>100 recetas de la buena cocina</string>
+	</dict>
+	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>no se necesita mayúscula</string>
+			</array>
+			<array>
+				<string>que (primero)</string>
+			</array>
+			<array>
+				<string>que (primero)</string>
+				<string>dormido</string>
+			</array>
+			<array>
+				<string>que (primero)</string>
+				<string>me</string>
+			</array>
+		</array>
+		<key>normas</key>
+		<array>
+			<integer>5</integer>
+		</array>
+		<key>tipo</key>
+		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>no se necesita mayúscula</string>
+		</array>
+		<key>enunciado</key>
+		<string>&quot;... que digan que estoy dormido y que me traigan aquí&quot;</string>
+	</dict>
+	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>la (primera)</string>
+			</array>
+			<array>
+				<string>la (primera)</string>
+				<string>https://dle.rae.es/diccionario</string>
+			</array>
+			<array>
+				<string>la (primera)</string>
+				<string>favoritos</string>
+			</array>
+			<array>
+				<string>la (primera)</string>
+				<string>lista</string>
+				<string>favoritos</string>
+			</array>
+		</array>
+		<key>normas</key>
+		<array>
+			<integer>2</integer>
+			<integer>9</integer>
+		</array>
+		<key>tipo</key>
+		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>2</integer>
+		<key>respuesta</key>
+		<array>
+			<string>la</string>
+		</array>
+		<key>enunciado</key>
+		<string>la dirección https://dle.rae.es/diccionario está en la lista de favoritos</string>
 	</dict>
 </array>
 </plist>
