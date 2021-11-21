@@ -30,6 +30,11 @@ class ViewControllerGame: UIViewController {
     @IBOutlet weak var buttonMayu: UIButton!
     @IBOutlet weak var labelScore: UILabel!
     
+    @IBOutlet weak var TimerLabel: UILabel!
+    var timer : Timer = Timer()
+    var count : Int = 0
+    var timerCounting : Bool = false
+    
     @IBOutlet weak var buttonOpc1: UIButton!
     @IBOutlet weak var buttonOpc2: UIButton!
     @IBOutlet weak var buttonOpc3: UIButton!
@@ -70,6 +75,13 @@ class ViewControllerGame: UIViewController {
         getAllQuestions()
         getRealQuestions()
         newQuestion()
+        
+        //agrega el timer para el modo contrareloj y lo inicializa
+        if gameMode == 2 {
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
+        } else if gameMode == 1{
+            TimerLabel.textColor = UIColor.white
+        }
         
         labelScore.text = "0/\(toUseQuestionList.count)"
     }
@@ -124,6 +136,7 @@ class ViewControllerGame: UIViewController {
     
     func showResults() {
         var alert : UIAlertController
+        timer.invalidate()
         if score == toUseQuestionList.count {
             alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/\(toUseQuestionList.count) aciertos.\n¡Felicidades!", preferredStyle: UIAlertController.Style.alert)
         }
@@ -416,6 +429,27 @@ class ViewControllerGame: UIViewController {
         }
     }
     
+    //Funciones para el timer
+    @objc func timerCounter() -> Void {
+        count = count + 1
+        let time = secondsToHoursMinutesSeconds(seconds: count)
+        let timeString = makeTimeString(hours: time.0, minutes: time.1, seconds: time.2)
+        TimerLabel.text = timeString
+    }
+    
+    func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int) {
+        return ((seconds / 3600), ((seconds % 3600)/60), ((seconds % 3600) % 60))
+    }
+    
+    func makeTimeString(hours : Int, minutes : Int, seconds : Int) -> String {
+        var timeString = ""
+        /*timeString += String(format: "%02d", hours)
+        timeString += " : "*/
+        timeString += String(format: "%02d", minutes)
+        timeString += ":"
+        timeString += String(format: "%02d", seconds)
+        return timeString
+    }
     
     
     /*
