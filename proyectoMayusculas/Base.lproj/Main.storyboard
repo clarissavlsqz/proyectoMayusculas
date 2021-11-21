@@ -467,9 +467,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="iZ3-8d-TcS">
-                                <rect key="frame" x="0.0" y="120" width="375" height="32"/>
+                                <rect key="frame" x="0.0" y="113" width="375" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.88796299700000003" green="0.84120827909999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="Zen-Facil"/>
                                     <segment title="Zen-Dificil"/>
@@ -529,7 +528,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Ic-b8-NqQ"/>
-                        <color key="backgroundColor" red="0.40288239720000002" green="0.20281231399999999" blue="0.64931899309999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Puntajes" largeTitleDisplayMode="always" id="zmH-31-Mnt"/>
                     <connections>

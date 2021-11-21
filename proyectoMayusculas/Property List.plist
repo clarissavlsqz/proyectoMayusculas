@@ -133,7 +133,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>4b</string>
+			<integer>4</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -151,7 +151,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>4b</string>
+			<integer>4</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -169,7 +169,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>4b</string>
+			<integer>4</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -187,7 +187,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>4b</string>
+			<integer>4</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -205,7 +205,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>4b</string>
+			<integer>4</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -223,7 +223,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -241,7 +241,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -259,7 +259,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -277,7 +277,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -295,7 +295,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -313,7 +313,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -331,7 +331,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -349,7 +349,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -367,7 +367,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -385,7 +385,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -403,7 +403,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -421,7 +421,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -439,7 +439,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -457,7 +457,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -475,7 +475,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -493,7 +493,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -511,7 +511,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -529,7 +529,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -547,7 +547,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -565,7 +565,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -583,7 +583,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
@@ -601,7 +601,7 @@
 		<array/>
 		<key>normas</key>
 		<array>
-			<string>8b</string>
+			<integer>8</integer>
 		</array>
 		<key>tipo</key>
 		<integer>1</integer>
