@@ -25,7 +25,6 @@ class ViewControllerGame: UIViewController {
     var score = 0
     var rulesToCheck : Set<Int> = []
     var finalScore: Int = 0
-    var secondsFromTimer: Int = 15
     var rightAnswer: String = ""
     var modalidad : String!
     var username : String!
@@ -480,9 +479,10 @@ class ViewControllerGame: UIViewController {
     
     //Función para calcular el Score final
     func calcFinalScore() {
-        if gameMode == 1 {
-            finalScore = (score * 100) - (secondsFromTimer * 2)
-        } else if gameMode == 2 {
+        if gameMode == 2 {
+            finalScore = (score * 100) + (Int(timeLeft) * 2)
+            print(timeLeft)
+        } else if gameMode == 1 {
             finalScore = score * 100
         }
     }
