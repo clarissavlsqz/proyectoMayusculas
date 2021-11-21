@@ -477,7 +477,7 @@ class ViewControllerGame: UIViewController {
     }
     
     
-    //Función para calcular el Score final
+    //Función para calcular el Score final tomando en cuenta el tiempo restante
     func calcFinalScore() {
         if gameMode == 2 {
             finalScore = (score * 100) + (Int(timeLeft) * 2)
