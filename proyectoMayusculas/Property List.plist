@@ -1529,7 +1529,7 @@
 			<integer>1</integer>
 		</array>
 		<key>tipo</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>dificultad</key>
 		<integer>1</integer>
 		<key>respuesta</key>
@@ -1567,7 +1567,7 @@
 			<integer>1</integer>
 		</array>
 		<key>tipo</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>dificultad</key>
 		<integer>1</integer>
 		<key>respuesta</key>
@@ -1603,7 +1603,7 @@
 			<integer>14</integer>
 		</array>
 		<key>tipo</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>dificultad</key>
 		<integer>1</integer>
 		<key>respuesta</key>
@@ -1637,7 +1637,7 @@
 			<integer>1</integer>
 		</array>
 		<key>tipo</key>
-		<integer>1</integer>
+		<integer>2</integer>
 		<key>dificultad</key>
 		<integer>1</integer>
 		<key>respuesta</key>
