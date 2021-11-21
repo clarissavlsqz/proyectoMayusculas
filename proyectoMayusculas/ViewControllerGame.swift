@@ -3,9 +3,15 @@
 //  proyectoMayusculas
 //
 //  Created by Clarissa Velásquez Magaña on 12/10/21.
-//
+//  Timer code reference from https://stackoverflow.com/questions/30289173/how-to-create-a-circular-progress-indicator-for-a-count-down-timer
 
 import UIKit
+
+extension TimeInterval {
+    var timeStr: String {
+        return String(format:"%02d:%02d", Int(self/60),  Int((truncatingRemainder(dividingBy: 60))) )
+    }
+}
 
 class ViewControllerGame: UIViewController {
     
@@ -30,11 +36,6 @@ class ViewControllerGame: UIViewController {
     @IBOutlet weak var buttonMayu: UIButton!
     @IBOutlet weak var labelScore: UILabel!
     
-    @IBOutlet weak var TimerLabel: UILabel!
-    var timer : Timer = Timer()
-    var count : Int = 0
-    var timerCounting : Bool = false
-    
     @IBOutlet weak var buttonOpc1: UIButton!
     @IBOutlet weak var buttonOpc2: UIButton!
     @IBOutlet weak var buttonOpc3: UIButton!
@@ -43,6 +44,16 @@ class ViewControllerGame: UIViewController {
     @IBOutlet weak var imagePurpleBg: UIImageView!
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var progressBar: UIProgressView!
+    
+    // Timer variables
+    let circularLayer = CAShapeLayer()
+    let progressLayer = CAShapeLayer()
+    var timeLeft: TimeInterval = 180
+    var endTime: Date?
+    var timeLabel : UILabel!
+    var timer = Timer()
+    let strokeIt = CABasicAnimation(keyPath: "strokeEnd")
+    
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -78,12 +89,35 @@ class ViewControllerGame: UIViewController {
         
         //agrega el timer para el modo contrareloj y lo inicializa
         if gameMode == 2 {
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
-        } else if gameMode == 1{
-            TimerLabel.textColor = UIColor.white
+            // delete the score label
+            labelScore.textColor = UIColor.clear
+            // draw circular progress timer
+            drawCircularShape()
+            drawProgressShape()
+            addTimeLabel()
+            // define the fromValue, toValue and duration of your animation
+            strokeIt.fromValue = 0
+            strokeIt.toValue = 1
+            strokeIt.duration = 180
+            // add the animation to your timeLeftShapeLayer
+            progressLayer.add(strokeIt, forKey: nil)
+            // define the future end time by adding the timeLeft to now Date()
+            endTime = Date().addingTimeInterval(timeLeft)
+            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         }
         
         labelScore.text = "0/\(toUseQuestionList.count)"
+    }
+    
+    @objc func updateTime() {
+        if timeLeft > 0 {
+            timeLeft = endTime?.timeIntervalSinceNow ?? 0
+            timeLabel.text = timeLeft.timeStr
+            }
+        else {
+            timeLabel.text = "00:00"
+            timer.invalidate()
+        }
     }
     
     @objc func holdDown(sender : UIButton) {
@@ -92,6 +126,29 @@ class ViewControllerGame: UIViewController {
     
     @objc func holdRelease(sender : UIButton) {
         sender.layer.borderColor = CGColor(red: 0.87, green: 0.84, blue: 0.94, alpha: 1.00)
+    }
+    
+    func drawCircularShape() {
+        circularLayer.path = UIBezierPath(arcCenter: CGPoint(x: view.frame.midX, y: 70.0), radius: 30, startAngle: CGFloat(-Double.pi / 2), endAngle: CGFloat(3 * Double.pi / 2), clockwise: true).cgPath
+        circularLayer.strokeColor = UIColor.lightGray.cgColor
+        circularLayer.fillColor = UIColor.white.cgColor
+        circularLayer.lineWidth = 3
+        view.layer.addSublayer(circularLayer)
+    }
+    
+    func drawProgressShape() {
+        progressLayer.path = UIBezierPath(arcCenter: CGPoint(x: view.frame.midX, y: 70.0), radius: 30, startAngle: CGFloat(-90 * Double.pi / 180), endAngle: CGFloat(270 * Double.pi / 180), clockwise: true).cgPath
+        progressLayer.strokeColor = UIColor.red.cgColor
+        progressLayer.fillColor = UIColor.clear.cgColor
+        progressLayer.lineWidth = 3
+        view.layer.addSublayer(progressLayer)
+    }
+    
+    func addTimeLabel() {
+        timeLabel = UILabel(frame: CGRect(x: view.frame.midX-25 ,y: 38.0, width: 50, height: 65))
+        timeLabel.textAlignment = .center
+        timeLabel.text = timeLeft.timeStr
+        view.addSubview(timeLabel)
     }
     
     func getAllQuestions() {
@@ -133,6 +190,7 @@ class ViewControllerGame: UIViewController {
         labelQuestion.text = toUseQuestionList[currQuestion].enunciado
     
     }
+    
     
     func showResults() {
         var alert : UIAlertController
@@ -427,28 +485,6 @@ class ViewControllerGame: UIViewController {
         } else if gameMode == 2 {
             finalScore = score * 100
         }
-    }
-    
-    //Funciones para el timer
-    @objc func timerCounter() -> Void {
-        count = count + 1
-        let time = secondsToHoursMinutesSeconds(seconds: count)
-        let timeString = makeTimeString(hours: time.0, minutes: time.1, seconds: time.2)
-        TimerLabel.text = timeString
-    }
-    
-    func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int) {
-        return ((seconds / 3600), ((seconds % 3600)/60), ((seconds % 3600) % 60))
-    }
-    
-    func makeTimeString(hours : Int, minutes : Int, seconds : Int) -> String {
-        var timeString = ""
-        /*timeString += String(format: "%02d", hours)
-        timeString += " : "*/
-        timeString += String(format: "%02d", minutes)
-        timeString += ":"
-        timeString += String(format: "%02d", seconds)
-        return timeString
     }
     
     
