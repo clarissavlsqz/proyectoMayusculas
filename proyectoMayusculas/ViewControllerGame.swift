@@ -477,8 +477,9 @@ class ViewControllerGame: UIViewController {
     }
     
     
-    //Función para calcular el Score final
+    //Función para calcular el Score final tomando en cuenta el tiempo restante
     func calcFinalScore() {
+        //Si el jugador selecciona la opción contrareloj su puntaje tomará en cuenta el timepo restante, a mayor tiempo restante mayor puntaje
         if gameMode == 2 {
             finalScore = (score * 100) + (Int(timeLeft) * 2)
             print(timeLeft)
