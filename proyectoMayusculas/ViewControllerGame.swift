@@ -61,6 +61,11 @@ class ViewControllerGame: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor =  UIColor.white
+        
+        //Font size
+        labelInstruction.font = labelInstruction.font.withSize(self.view.frame.height / 35)
+        labelQuestion.font = labelQuestion.font.withSize(self.view.frame.height / 40)
+        
         // Do any additional setup after loading the view.
         imagePurpleBg.clipsToBounds = false
         imagePurpleBg.layer.shadowColor = UIColor.black.cgColor
