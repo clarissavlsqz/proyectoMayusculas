@@ -110,7 +110,7 @@ class ViewControllerGame: UIViewController {
             timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         }
         
-        labelScore.text = "0/13"
+        labelScore.text = "0/10"
     }
     
     @objc func updateTime() {
@@ -199,8 +199,8 @@ class ViewControllerGame: UIViewController {
     func showResults() {
         var alert : UIAlertController
         timer.invalidate()
-        if score == 13 {
-            alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/13 aciertos.\n¡Felicidades!", preferredStyle: UIAlertController.Style.alert)
+        if score == 10 {
+            alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/10 aciertos.\n¡Felicidades!", preferredStyle: UIAlertController.Style.alert)
         }
         else {
             var rules : String = ""
@@ -209,7 +209,7 @@ class ViewControllerGame: UIViewController {
             }
             rules.remove(at: rules.index(before: rules.endIndex))
             
-            alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/13 aciertos\nRevisa la o las siguientes reglas: \(rules)"  , preferredStyle: UIAlertController.Style.alert)
+            alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/10 aciertos\nRevisa la o las siguientes reglas: \(rules)"  , preferredStyle: UIAlertController.Style.alert)
         }
         
         alert.addTextField()
@@ -299,7 +299,7 @@ class ViewControllerGame: UIViewController {
             score += 1
             progressBar.progressTintColor = UIColor.green
             print("correct")
-            labelScore.text = "\(score)/13"
+            labelScore.text = "\(score)/10"
         }
         else {
             rulesToCheck.formUnion(toUseQuestionList[currQuestion].normas)
@@ -307,8 +307,8 @@ class ViewControllerGame: UIViewController {
         }
         
         currQuestion += 1
-        progressBar.progress = Float(currQuestion) / Float(13)
-        if (currQuestion < 13) {
+        progressBar.progress = Float(currQuestion) / Float(10)
+        if (currQuestion < 10) {
             newQuestion()
         }
         else {
@@ -323,15 +323,15 @@ class ViewControllerGame: UIViewController {
             score += 1
             print("correct")
             progressBar.progressTintColor = UIColor.green
-            labelScore.text = "\(score)/13"
+            labelScore.text = "\(score)/10"
         }
         else {
             rulesToCheck.formUnion(toUseQuestionList[currQuestion].normas)
             progressBar.progressTintColor = UIColor.red
         }
         currQuestion += 1
-        progressBar.progress = Float(currQuestion) / Float(13)
-        if (currQuestion < 13) {
+        progressBar.progress = Float(currQuestion) / Float(10)
+        if (currQuestion < 10) {
             newQuestion()
         }
         else {
@@ -473,7 +473,7 @@ class ViewControllerGame: UIViewController {
             score += 1
             print("correct")
             progressBar.progressTintColor = UIColor.green
-            labelScore.text = "\(score)/13"
+            labelScore.text = "\(score)/10"
         }else{
             print("incorrect")
             rulesToCheck.formUnion(toUseQuestionList[currQuestion].normas)
@@ -481,8 +481,8 @@ class ViewControllerGame: UIViewController {
         }
         
         currQuestion += 1
-        progressBar.progress = Float(currQuestion) / Float(13)
-        if (currQuestion < 13) {
+        progressBar.progress = Float(currQuestion) / Float(10)
+        if (currQuestion < 10) {
             newQuestion()
         }
         else {
