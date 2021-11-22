@@ -14,8 +14,6 @@ class ViewControllerInformation: UIViewController {
     
     let boldText = "Mayúsculas "
     
-    let attrs = [NSAttributedString.Key.font: UIFont.italicSystemFont(ofSize: 12)]
-    
     
     @IBOutlet weak var labelTitle: UILabel!
     
@@ -28,11 +26,14 @@ class ViewControllerInformation: UIViewController {
         labelTitle.layer.shadowOffset = CGSize(width: 0, height: 0)
         labelTitle.layer.shadowOpacity = 0.1
         labelTitle.layer.shadowRadius = 2.5
+        labelInfo.font = labelInfo.font.withSize(self.view.frame.height / 65)
         attributeText()
+        
         // Do any additional setup after loading the view.
     }
     
     func attributeText() {
+        let attrs = [NSAttributedString.Key.font: UIFont.italicSystemFont(ofSize: self.view.frame.height/65)]
         let attrString = NSMutableAttributedString(string:boldText, attributes:attrs)
         let attrString2 = NSMutableAttributedString(string:boldText, attributes:attrs)
         

@@ -61,6 +61,11 @@ class ViewControllerGame: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor =  UIColor.white
+        
+        //Font size
+        labelInstruction.font = labelInstruction.font.withSize(self.view.frame.height / 35)
+        labelQuestion.font = labelQuestion.font.withSize(self.view.frame.height / 40)
+        
         // Do any additional setup after loading the view.
         imagePurpleBg.clipsToBounds = false
         imagePurpleBg.layer.shadowColor = UIColor.black.cgColor
@@ -105,7 +110,7 @@ class ViewControllerGame: UIViewController {
             timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         }
         
-        labelScore.text = "0/13"
+        labelScore.text = "0/10"
     }
     
     @objc func updateTime() {
@@ -194,8 +199,8 @@ class ViewControllerGame: UIViewController {
     func showResults() {
         var alert : UIAlertController
         timer.invalidate()
-        if score == 13 {
-            alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/13 aciertos.\n¡Felicidades!", preferredStyle: UIAlertController.Style.alert)
+        if score == 10 {
+            alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/10 aciertos.\n¡Felicidades!", preferredStyle: UIAlertController.Style.alert)
         }
         else {
             var rules : String = ""
@@ -204,7 +209,7 @@ class ViewControllerGame: UIViewController {
             }
             rules.remove(at: rules.index(before: rules.endIndex))
             
-            alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/13 aciertos\nRevisa la o las siguientes reglas: \(rules)"  , preferredStyle: UIAlertController.Style.alert)
+            alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/10 aciertos\nRevisa la o las siguientes reglas: \(rules)"  , preferredStyle: UIAlertController.Style.alert)
         }
         
         alert.addTextField()
@@ -294,7 +299,7 @@ class ViewControllerGame: UIViewController {
             score += 1
             progressBar.progressTintColor = UIColor.green
             print("correct")
-            labelScore.text = "\(score)/13"
+            labelScore.text = "\(score)/10"
         }
         else {
             rulesToCheck.formUnion(toUseQuestionList[currQuestion].normas)
@@ -302,8 +307,8 @@ class ViewControllerGame: UIViewController {
         }
         
         currQuestion += 1
-        progressBar.progress = Float(currQuestion) / Float(13)
-        if (currQuestion < 13) {
+        progressBar.progress = Float(currQuestion) / Float(10)
+        if (currQuestion < 10) {
             newQuestion()
         }
         else {
@@ -318,15 +323,15 @@ class ViewControllerGame: UIViewController {
             score += 1
             print("correct")
             progressBar.progressTintColor = UIColor.green
-            labelScore.text = "\(score)/13"
+            labelScore.text = "\(score)/10"
         }
         else {
             rulesToCheck.formUnion(toUseQuestionList[currQuestion].normas)
             progressBar.progressTintColor = UIColor.red
         }
         currQuestion += 1
-        progressBar.progress = Float(currQuestion) / Float(13)
-        if (currQuestion < 13) {
+        progressBar.progress = Float(currQuestion) / Float(10)
+        if (currQuestion < 10) {
             newQuestion()
         }
         else {
@@ -347,6 +352,8 @@ class ViewControllerGame: UIViewController {
             buttonMin.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
             buttonMayu.addTarget(self, action: #selector(holdDown), for: .touchDown)
             buttonMayu.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+            buttonMin.titleLabel?.font = buttonMin.titleLabel?.font.withSize(self.view.frame.height / 40)
+            buttonMayu.titleLabel?.font = buttonMayu.titleLabel?.font.withSize(self.view.frame.height / 40)
             
             
             buttonOpc1.isEnabled = false
@@ -424,6 +431,10 @@ class ViewControllerGame: UIViewController {
             buttonOpc4.addTarget(self, action: #selector(holdDown), for: .touchDown)
             buttonOpc4.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
             
+            buttonOpc1.titleLabel?.font = buttonOpc1.titleLabel?.font.withSize(self.view.frame.height / 40)
+            buttonOpc2.titleLabel?.font = buttonOpc2.titleLabel?.font.withSize(self.view.frame.height / 40)
+            buttonOpc3.titleLabel?.font = buttonOpc3.titleLabel?.font.withSize(self.view.frame.height / 40)
+            buttonOpc4.titleLabel?.font = buttonOpc4.titleLabel?.font.withSize(self.view.frame.height / 40)
             
         }
     }
@@ -468,7 +479,7 @@ class ViewControllerGame: UIViewController {
             score += 1
             print("correct")
             progressBar.progressTintColor = UIColor.green
-            labelScore.text = "\(score)/13"
+            labelScore.text = "\(score)/10"
         }else{
             print("incorrect")
             rulesToCheck.formUnion(toUseQuestionList[currQuestion].normas)
@@ -476,8 +487,8 @@ class ViewControllerGame: UIViewController {
         }
         
         currQuestion += 1
-        progressBar.progress = Float(currQuestion) / Float(13)
-        if (currQuestion < 13) {
+        progressBar.progress = Float(currQuestion) / Float(10)
+        if (currQuestion < 10) {
             newQuestion()
         }
         else {
