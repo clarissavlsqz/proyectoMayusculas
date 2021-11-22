@@ -219,9 +219,14 @@ class ViewControllerGame: UIViewController {
                 }
             }
             self.guardarDatos()
+            self.regresar()
         })
         
-        let cancelAction = UIAlertAction(title: "Salir", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Salir", style: .cancel, handler: {(action:UIAlertAction!) in
+            print("Cancelar")
+            
+            self.regresar()
+        })
         
         //alert.addTextField()
         
@@ -277,6 +282,11 @@ class ViewControllerGame: UIViewController {
             }
             
         }
+        
+    }
+    
+    @IBAction func regresar(){
+        performSegue(withIdentifier: "rt", sender: self)
     }
     
     @IBAction func pressedMin(_ sender: UIButton) {
