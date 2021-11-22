@@ -88,6 +88,7 @@ class ViewControllerTablas: UIViewController, UITableViewDataSource, UITableView
         default:
             key = "ZF"
         }
+        print(key)
         actualizaArreglo()
     }
     
