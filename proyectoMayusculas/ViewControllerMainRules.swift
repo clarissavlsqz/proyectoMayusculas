@@ -20,7 +20,8 @@ class ViewControllerMainRules: UIViewController {
     @IBOutlet weak var buttonR7: UIButton!
     @IBOutlet weak var buttonR8: UIButton!
     @IBOutlet weak var buttonR9: UIButton!
-    
+    @IBOutlet weak var buttonR10: UIButton!
+    @IBOutlet weak var buttonR11: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +88,16 @@ class ViewControllerMainRules: UIViewController {
         buttonR9.layer.shadowOpacity = 0.2
         buttonR9.layer.shadowRadius = 2.0
         
+        buttonR10.layer.shadowColor = UIColor.black.cgColor
+        buttonR10.layer.shadowOffset = CGSize(width: 0, height: 0)
+        buttonR10.layer.shadowOpacity = 0.2
+        buttonR10.layer.shadowRadius = 2.0
+        
+        buttonR11.layer.shadowColor = UIColor.black.cgColor
+        buttonR11.layer.shadowOffset = CGSize(width: 0, height: 0)
+        buttonR11.layer.shadowOpacity = 0.2
+        buttonR11.layer.shadowRadius = 2.0
+        
         buttonR1.addTarget(self, action: #selector(holdDown), for: .touchDown)
         buttonR1.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
         
@@ -113,7 +124,12 @@ class ViewControllerMainRules: UIViewController {
         
         buttonR9.addTarget(self, action: #selector(holdDown), for: .touchDown)
         buttonR9.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
-
+        
+        buttonR10.addTarget(self, action: #selector(holdDown), for: .touchDown)
+        buttonR10.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+        
+        buttonR11.addTarget(self, action: #selector(holdDown), for: .touchDown)
+        buttonR11.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
     
@@ -133,39 +149,45 @@ class ViewControllerMainRules: UIViewController {
         
         if segue.identifier == "rule1" {
             viewNorma.titleNorma = "Nombres propios"
-            viewNorma.norma = "Los nombres propios se escriben con mayúscula inicial (de personas, ciudades, ríos, festividades, disciplinas científicas), o los apodos o sobrenombres que acompañan o sustituyen a un nombre propio."
+            viewNorma.norma = "Los nombres propios se escriben con mayúscula inicial (de personas, ciudades, ríos, festividades, disciplinas científicas), o los apodos o sobrenombres que acompañan o sustituyen a un nombre propio. \n\n1b. Cargos \nVayan o no acompañados del nombre de la persona, se escribe con minúscula la palabra que indica el cargo que dicha persona ostenta."
             
         } else if segue.identifier == "rule2" {
             viewNorma.titleNorma = "La primera letra"
-            viewNorma.norma = "La primera letra de cada enunciado y después de punto deberá ser mayúscula."
+            viewNorma.norma = "La primera letra de cada enunciado y después de punto deberá ser mayúscula. \n\n2b. Penínsulas \nLos nombres de penínsulas, cuando son un adjetivo que se refiere a un topónimo."
             
         } else if segue.identifier == "rule3" {
             viewNorma.titleNorma = "En cartas y documentos formales"
-            viewNorma.norma = "La primera palabra después de las fórmulas de cortesía con las que inician las cartas y otros documentos formales."
+            viewNorma.norma = "La primera palabra después de las fórmulas de cortesía con las que inician las cartas y otros documentos formales. \n\n3b. Premios \nEn general, las categorías de los premios y el  nombre del premio cuando se refiere a la persona que lo recibió o al objeto (estatuilla, por ejemplo)."
             
         } else if segue.identifier == "rule4" {
             viewNorma.titleNorma = "Siglas o acrónimos"
-            viewNorma.norma = "Las siglas o acrónimos deberán ir en mayúsculas."
+            viewNorma.norma = "Las siglas o acrónimos deberán ir en mayúsculas. \n\n4b. Puntos cardinales \nLos puntos cardinales y las líneas imaginarias no son nombres propios."
             
         } else if segue.identifier == "rule5" {
             viewNorma.titleNorma = "Sustantivos y adjetivos"
-            viewNorma.norma = "Los sustantivos y adjetivos que forman parte de  los nombres de instituciones, entidades, organismo, partidos políticos, etc. o de un plan, programa o proyecto. o materias y cursos. o de congresos y reuniones académicas, técnicas, culturales o políticas. "
+            viewNorma.norma = "Los sustantivos y adjetivos que forman parte de  los nombres de instituciones, entidades, organismo, partidos políticos, etc. o de un plan, programa o proyecto. o materias y cursos. o de congresos y reuniones académicas, técnicas, culturales o políticas. \n\n5b. Fragmento incompleto en una cita \nEn una cita textual, después de los puntos suspensivos iniciales que indican que se omite el principio del fragmento citado."
             
         } else if segue.identifier == "rule6" {
             viewNorma.titleNorma = "Sustantivos colectivos"
-            viewNorma.norma = "Los sustantivos colectivos que significan entidades o corporaciones."
+            viewNorma.norma = "Los sustantivos colectivos que significan entidades o corporaciones. \n\n6b. Fragmento que comienza con cifra \nSi un texto comienza con una cifra, la palabra siguiente inicia con minúscula."
             
         } else if segue.identifier == "rule7" {
             viewNorma.titleNorma = "Fórmulas de tratamiento"
-            viewNorma.norma = "Las fórmulas de tratamiento abreviadas: Sto., Lic., Sr., Ud."
+            viewNorma.norma = "Las fórmulas de tratamiento abreviadas: Sto., Lic., Sr., Ud. \n\n7b. Símbolos internacionales \nLos símbolos de caracter internacional mantinen su escritura fija de mayúscula o minúscula."
             
         } else if segue.identifier == "rule8" {
             viewNorma.titleNorma = "Guerras y batallas"
-            viewNorma.norma = "En el caso de las guerras y batallas se escriben con mayúsculas las palabras que especifican de cuál conflicto se habla, excepto los dos mundiales."
+            viewNorma.norma = "En el caso de las guerras y batallas se escriben con mayúsculas las palabras que especifican de cuál conflicto se habla, excepto los dos mundiales. \n\n8b. Días, meses, estaciones \nLos días de la semana, los meses del año y las estaciones son nombres comunes."
             
         } else if segue.identifier == "rule9" {
             viewNorma.titleNorma = "Direcciones electrónicas"
-            viewNorma.norma = "Es preferible escribir las direcciones electónicas  tal como aparecen en el buscador, es decir, con minúscula.  Se sugiere no ponerlas al inicio de un enunciado."
+            viewNorma.norma = "Es preferible escribir las direcciones electónicas  tal como aparecen en el buscador, es decir, con minúscula.  Se sugiere no ponerlas al inicio de un enunciado. \n\n9b. Direcciones electrónicas \nEs preferible escribir las direcciones electónicas tal como aparecen en el buscador, es decir, con minúscula. Se sugiere no ponerlas al inicio de un enunciado."
+        } else if segue.identifier == "rule10" {
+            viewNorma.titleNorma = "Artículos en topónimos"
+            viewNorma.norma = "Los artículos cuando forman parte del nombre propio; además, en este caso, no se contraen. \n\n10b. Aposiciones \nLas aposiciones explicativas que usualmente acompañan a nombres de personas o ciudades."
+        } else if segue.identifier == "rule11" {
+            viewNorma.titleNorma = "Premios"
+            viewNorma.norma = "Los artículos cuando forman parte del nombre propio; además, en este caso, no se contraen. \n\n11b. Metonimias y antonomasias \nCuando un nombre propio se usa para llamar un objeto común."
         }
         
         
