@@ -352,6 +352,8 @@ class ViewControllerGame: UIViewController {
             buttonMin.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
             buttonMayu.addTarget(self, action: #selector(holdDown), for: .touchDown)
             buttonMayu.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
+            buttonMin.titleLabel?.font = buttonMin.titleLabel?.font.withSize(self.view.frame.height / 40)
+            buttonMayu.titleLabel?.font = buttonMayu.titleLabel?.font.withSize(self.view.frame.height / 40)
             
             
             buttonOpc1.isEnabled = false
@@ -429,6 +431,10 @@ class ViewControllerGame: UIViewController {
             buttonOpc4.addTarget(self, action: #selector(holdDown), for: .touchDown)
             buttonOpc4.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
             
+            buttonOpc1.titleLabel?.font = buttonOpc1.titleLabel?.font.withSize(self.view.frame.height / 40)
+            buttonOpc2.titleLabel?.font = buttonOpc2.titleLabel?.font.withSize(self.view.frame.height / 40)
+            buttonOpc3.titleLabel?.font = buttonOpc3.titleLabel?.font.withSize(self.view.frame.height / 40)
+            buttonOpc4.titleLabel?.font = buttonOpc4.titleLabel?.font.withSize(self.view.frame.height / 40)
             
         }
     }
