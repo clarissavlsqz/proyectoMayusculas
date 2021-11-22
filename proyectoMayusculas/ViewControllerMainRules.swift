@@ -47,56 +47,79 @@ class ViewControllerMainRules: UIViewController {
         buttonR1.layer.shadowOffset = CGSize(width: 0, height: 0)
         buttonR1.layer.shadowOpacity = 0.2
         buttonR1.layer.shadowRadius = 2.0
+        //buttonR1.titleLabel?.adjustsFontForContentSizeCategory = true
+        buttonR1.titleLabel?.adjustsFontSizeToFitWidth = true
         
         buttonR2.layer.shadowColor = UIColor.black.cgColor
         buttonR2.layer.shadowOffset = CGSize(width: 0, height: 0)
         buttonR2.layer.shadowOpacity = 0.2
         buttonR2.layer.shadowRadius = 2.0
+        //buttonR2.titleLabel?.adjustsFontForContentSizeCategory = true
+        buttonR2.titleLabel?.adjustsFontSizeToFitWidth = true
         
         buttonR3.layer.shadowColor = UIColor.black.cgColor
         buttonR3.layer.shadowOffset = CGSize(width: 0, height: 0)
         buttonR3.layer.shadowOpacity = 0.2
         buttonR3.layer.shadowRadius = 2.0
+        //buttonR3.titleLabel?.adjustsFontForContentSizeCategory = true
+        //buttonR3.titleLabel?.minimumScaleFactor = 0.5
+        buttonR3.titleLabel?.adjustsFontSizeToFitWidth = true
         
         buttonR4.layer.shadowColor = UIColor.black.cgColor
         buttonR4.layer.shadowOffset = CGSize(width: 0, height: 0)
         buttonR4.layer.shadowOpacity = 0.2
         buttonR4.layer.shadowRadius = 2.0
+        //buttonR4.titleLabel?.adjustsFontForContentSizeCategory = true
+        buttonR4.titleLabel?.adjustsFontSizeToFitWidth = true
         
         buttonR5.layer.shadowColor = UIColor.black.cgColor
         buttonR5.layer.shadowOffset = CGSize(width: 0, height: 0)
         buttonR5.layer.shadowOpacity = 0.2
         buttonR5.layer.shadowRadius = 2.0
+        //buttonR5.titleLabel?.adjustsFontForContentSizeCategory = true
+        buttonR5.titleLabel?.adjustsFontSizeToFitWidth = true
         
         buttonR6.layer.shadowColor = UIColor.black.cgColor
         buttonR6.layer.shadowOffset = CGSize(width: 0, height: 0)
         buttonR6.layer.shadowOpacity = 0.2
         buttonR6.layer.shadowRadius = 2.0
+        //buttonR6.titleLabel?.adjustsFontForContentSizeCategory = true
+        buttonR6.titleLabel?.adjustsFontSizeToFitWidth = true
         
         buttonR7.layer.shadowColor = UIColor.black.cgColor
         buttonR7.layer.shadowOffset = CGSize(width: 0, height: 0)
         buttonR7.layer.shadowOpacity = 0.2
         buttonR7.layer.shadowRadius = 2.0
+        //buttonR7.titleLabel?.adjustsFontForContentSizeCategory = true
+        buttonR7.titleLabel?.adjustsFontSizeToFitWidth = true
         
         buttonR8.layer.shadowColor = UIColor.black.cgColor
         buttonR8.layer.shadowOffset = CGSize(width: 0, height: 0)
         buttonR8.layer.shadowOpacity = 0.2
         buttonR8.layer.shadowRadius = 2.0
+        //buttonR8.titleLabel?.adjustsFontForContentSizeCategory = true
+        buttonR8.titleLabel?.adjustsFontSizeToFitWidth = true
         
         buttonR9.layer.shadowColor = UIColor.black.cgColor
         buttonR9.layer.shadowOffset = CGSize(width: 0, height: 0)
         buttonR9.layer.shadowOpacity = 0.2
         buttonR9.layer.shadowRadius = 2.0
+        //buttonR9.titleLabel?.adjustsFontForContentSizeCategory = true
+        buttonR9.titleLabel?.adjustsFontSizeToFitWidth = true
         
         buttonR10.layer.shadowColor = UIColor.black.cgColor
         buttonR10.layer.shadowOffset = CGSize(width: 0, height: 0)
         buttonR10.layer.shadowOpacity = 0.2
         buttonR10.layer.shadowRadius = 2.0
+        //buttonR10.titleLabel?.adjustsFontForContentSizeCategory = true
+        buttonR10.titleLabel?.adjustsFontSizeToFitWidth = true
         
         buttonR11.layer.shadowColor = UIColor.black.cgColor
         buttonR11.layer.shadowOffset = CGSize(width: 0, height: 0)
         buttonR11.layer.shadowOpacity = 0.2
         buttonR11.layer.shadowRadius = 2.0
+        //buttonR11.titleLabel?.adjustsFontForContentSizeCategory = true
+        buttonR11.titleLabel?.adjustsFontSizeToFitWidth = true
         
         buttonR1.addTarget(self, action: #selector(holdDown), for: .touchDown)
         buttonR1.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
