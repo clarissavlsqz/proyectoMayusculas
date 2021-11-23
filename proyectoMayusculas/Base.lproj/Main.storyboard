@@ -17,11 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Mayúsculas o mínusculas?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adr-EH-a2I">
-
-                               
-
                                 <rect key="frame" x="10" y="232" width="355" height="25.5"/>
-
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25.5" id="i5u-Bs-PkZ"/>
                                 </constraints>
@@ -30,11 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQF-dO-eoi">
-
-                                
-
                                 <rect key="frame" x="80" y="314" width="215" height="39"/>
-
                                 <color key="backgroundColor" red="0.5568627451" green="0.14117647059999999" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Reglas">
@@ -45,11 +37,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjt-8I-kza">
-
-                               
-
                                 <rect key="frame" x="80" y="383" width="215" height="39"/>
-
                                 <color key="backgroundColor" red="0.55799239869999995" green="0.14069360489999999" blue="0.85066717859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="7c3-UA-jkA"/>
@@ -63,9 +51,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoO-zH-MVH">
-
-                                
-
                                 <rect key="frame" x="80" y="452" width="215" height="39"/>
                                 <color key="backgroundColor" red="0.5568627451" green="0.14117647059999999" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -77,31 +62,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EU-eo-5eM">
-
-                                
-
                                 <rect key="frame" x="334" y="623" width="25" height="24"/>
-
                                 <connections>
                                     <segue destination="Vid-ct-3aw" kind="show" id="jec-nf-vbw"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="RRa-Gi-y3b">
-
-                                
-
                                 <rect key="frame" x="0.0" y="568" width="98" height="99"/>
-
                                 <constraints>
                                     <constraint firstAttribute="height" constant="99" id="khX-SF-gwU"/>
                                     <constraint firstAttribute="width" constant="98" id="rLW-8z-qK1"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="0X9-DD-Sss">
-
-                                
                                 <rect key="frame" x="-22" y="34" width="419" height="190"/>
-
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -591,18 +565,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celda" id="TgI-PX-qTZ" customClass="TableViewCell" customModule="proyectoMayusculas" customModuleProvider="target">
-
-                                        <rect key="frame" x="0.0" y="28" width="320" height="43"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TgI-PX-qTZ" id="iSU-wZ-Ciy">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-
-
-
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ti-fO-4sO" userLabel="nombre">
-                                                    <rect key="frame" x="16" y="11" width="94" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="94" height="21.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="94" id="dw6-Kv-f6G"/>
                                                     </constraints>
@@ -611,10 +581,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpy-Zl-AbI" userLabel="tiempo">
-
-                                                    <rect key="frame" x="160" y="11" width="144" height="21"/>
-
-
+                                                    <rect key="frame" x="215" y="11" width="144" height="21.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="144" id="1mY-by-8zc"/>
                                                     </constraints>
@@ -623,7 +590,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3y-qQ-lnd" userLabel="puntaje">
-                                                    <rect key="frame" x="130" y="11" width="67" height="21"/>
+                                                    <rect key="frame" x="130" y="11" width="67" height="21.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="67" id="iW3-i3-WAF"/>
                                                     </constraints>
@@ -755,21 +722,6 @@
                                         <rect key="frame" x="20" y="57" width="273" height="486"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhX-zt-EL3">
-                                                <rect key="frame" x="1" y="360" width="216" height="37"/>
-                                                <color key="backgroundColor" red="0.85737218235652191" green="0.82202733966141128" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="37" id="ANt-WM-PBb"/>
-                                                </constraints>
-
-                                            
-
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <state key="normal" title="9. Direcciones electrónicas">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhX-zt-EL3">
                                                 <rect key="frame" x="2" y="360" width="272" height="37"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -782,12 +734,9 @@
                                                     <segue destination="LrZ-KQ-ekj" kind="presentation" identifier="rule9" id="iS8-qs-fK2"/>
                                                 </connections>
                                             </button>
-
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsv-G9-ycG">
-                                                <rect key="frame" x="1" y="315" width="216" height="37"/>
-
-                                            
-
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsv-G9-ycG">
+                                                <rect key="frame" x="1" y="315" width="272" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.85737218235652191" green="0.82202733966141128" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="8. Guerras y batallas">
@@ -797,12 +746,9 @@
                                                     <segue destination="LrZ-KQ-ekj" kind="presentation" identifier="rule8" id="BC4-S6-glT"/>
                                                 </connections>
                                             </button>
-
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RZ-rK-9GK">
-                                                <rect key="frame" x="1" y="270" width="216" height="37"/>
-
-                                            
-
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RZ-rK-9GK">
+                                                <rect key="frame" x="1" y="270" width="272" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.85737218235652191" green="0.82202733966141128" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="7. Fórmulas de tratamiento">
@@ -812,10 +758,9 @@
                                                     <segue destination="LrZ-KQ-ekj" kind="presentation" identifier="rule7" id="kov-Jb-qcc"/>
                                                 </connections>
                                             </button>
-
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfs-uh-Zru">
-                                                <rect key="frame" x="1" y="225" width="216" height="37"/>
-
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfs-uh-Zru">
+                                                <rect key="frame" x="1" y="225" width="273" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.85737218235652191" green="0.82202733966141128" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="6. Sustantivos colectivos">
@@ -825,12 +770,9 @@
                                                     <segue destination="LrZ-KQ-ekj" kind="presentation" identifier="rule6" id="GhC-4G-Vme"/>
                                                 </connections>
                                             </button>
-
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vx3-0m-JrZ">
-                                                <rect key="frame" x="1" y="180" width="216" height="37"/>
-
-                                           
-
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vx3-0m-JrZ">
+                                                <rect key="frame" x="1" y="180" width="272" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.85737218235652191" green="0.82202733966141128" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="5. Sustantivos y adjetivos">
@@ -840,12 +782,9 @@
                                                     <segue destination="LrZ-KQ-ekj" kind="presentation" identifier="rule5" id="Hzp-nx-od5"/>
                                                 </connections>
                                             </button>
-
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acL-Zh-alc">
-                                                <rect key="frame" x="1" y="135" width="216" height="37"/>
-
-                                           
-
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acL-Zh-alc">
+                                                <rect key="frame" x="1" y="135" width="273" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.85737218235652191" green="0.82202733966141128" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="4. Siglas y acrónimos">
@@ -855,11 +794,9 @@
                                                     <segue destination="LrZ-KQ-ekj" kind="presentation" identifier="rule4" id="gk8-P7-rUH"/>
                                                 </connections>
                                             </button>
-
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCl-6Y-Lih">
-                                                <rect key="frame" x="1" y="90" width="216" height="37"/>
-                                           
-
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCl-6Y-Lih">
+                                                <rect key="frame" x="1" y="90" width="272" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.85737218235652191" green="0.82202733966141128" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="3. En cartas y documentos formales">
@@ -869,11 +806,9 @@
                                                     <segue destination="LrZ-KQ-ekj" kind="presentation" identifier="rule3" id="ug9-xT-8E6"/>
                                                 </connections>
                                             </button>
-
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLe-GH-356">
-                                                <rect key="frame" x="0.0" y="45" width="216" height="37"/>
-
-                                           
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLe-GH-356">
+                                                <rect key="frame" x="0.0" y="45" width="274" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.85737218235652191" green="0.82202733966141128" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="2. La primera letra ">
@@ -883,12 +818,9 @@
                                                     <segue destination="LrZ-KQ-ekj" kind="presentation" identifier="rule2" id="gAX-9P-pcJ"/>
                                                 </connections>
                                             </button>
-
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdi-zo-JUw">
-                                                <rect key="frame" x="0.0" y="0.0" width="216" height="37"/>
-
-                                            
-
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdi-zo-JUw">
+                                                <rect key="frame" x="0.0" y="0.0" width="273" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.85882352939999995" green="0.82352941180000006" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="1. Nombres propios">
@@ -898,11 +830,9 @@
                                                     <segue destination="LrZ-KQ-ekj" kind="presentation" identifier="rule1" id="vkw-Bo-lCf"/>
                                                 </connections>
                                             </button>
-
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8F-hp-iKZ">
-                                                <rect key="frame" x="0.0" y="405" width="216" height="37"/>
-
-                                            
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8F-hp-iKZ">
+                                                <rect key="frame" x="0.0" y="405" width="273" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.85737218240000002" green="0.82202733969999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="10. Artículos en topónimos">
@@ -912,12 +842,9 @@
                                                     <segue destination="LrZ-KQ-ekj" kind="presentation" identifier="rule10" id="QJZ-aR-4ue"/>
                                                 </connections>
                                             </button>
-
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5so-MK-4Q1">
-                                                <rect key="frame" x="1" y="449" width="216" height="37"/>
-
-                                            
-
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5so-MK-4Q1">
+                                                <rect key="frame" x="1" y="449" width="272" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.85737218240000002" green="0.82202733969999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="11. Premios">
