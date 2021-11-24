@@ -100,7 +100,10 @@ class ViewControllerTablas: UIViewController, UITableViewDataSource, UITableView
         // Configure the cell...
         cell.nombre?.text = arreglo[indexPath.row].jugador
         cell.puntaje?.text = String(arreglo[indexPath.row].puntos)
-        cell.tiempo?.text = arreglo[indexPath.row].tiempo.description
+        let formatter = DateFormatter()
+        formatter.setLocalizedDateFormatFromTemplate("dd-MM-yyyy")
+        let date = formatter.string(from: arreglo[indexPath.row].tiempo)
+        cell.tiempo?.text = date
         cell.tiempo?.adjustsFontSizeToFitWidth = true
         return cell
     }

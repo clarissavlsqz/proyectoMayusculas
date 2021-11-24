@@ -3,7 +3,7 @@
 //  proyectoMayusculas
 //
 //  Created by Clarissa Velásquez Magaña on 04/10/21.
-//
+//  Image background reference: <a href="https://www.vecteezy.com/free-vector/purple">Purple Vectors by Vecteezy</a>
 
 import UIKit
 
