@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.navigationController?.navigationItem.backButtonTitle = "Atrás"
+        
         buttonRules.layer.cornerRadius = 5
         buttonPlay.layer.cornerRadius = 5
         buttonLeaderboard.layer.cornerRadius = 5
