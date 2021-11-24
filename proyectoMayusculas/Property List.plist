@@ -803,7 +803,6 @@
 			</array>
 			<array>
 				<string>la</string>
-				<string>dirección</string>
 			</array>
 		</array>
 		<key>normas</key>
@@ -936,8 +935,8 @@
 		<integer>2</integer>
 		<key>respuesta</key>
 		<array>
-			<string>biden</string>
 			<string>el</string>
+			<string>biden</string>
 		</array>
 		<key>enunciado</key>
 		<string>el presidente biden recibirá a los embajadores el día de mañana.</string>
