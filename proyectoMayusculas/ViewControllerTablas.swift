@@ -74,7 +74,6 @@ class ViewControllerTablas: UIViewController, UITableViewDataSource, UITableView
     }
 
     
-    
     @IBAction func changeTable(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex{
         case 0:
@@ -102,6 +101,7 @@ class ViewControllerTablas: UIViewController, UITableViewDataSource, UITableView
         cell.nombre?.text = arreglo[indexPath.row].jugador
         cell.puntaje?.text = String(arreglo[indexPath.row].puntos)
         cell.tiempo?.text = arreglo[indexPath.row].tiempo.description
+        cell.tiempo?.adjustsFontSizeToFitWidth = true
         return cell
     }
     

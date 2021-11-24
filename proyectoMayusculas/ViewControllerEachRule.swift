@@ -14,12 +14,14 @@ class ViewControllerEachRule: UIViewController {
     @IBOutlet weak var lbNorma: UILabel!
     @IBOutlet weak var whiteView: UIView!
     
+    
     var titleNorma : String!
     var norma : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        lbTitle.adjustsFontSizeToFitWidth = true
+        lbNorma.adjustsFontSizeToFitWidth = true
         lbTitle.text = titleNorma
         lbNorma.text = norma
                 
