@@ -39,6 +39,10 @@ class ViewControllerGameMode: UIViewController {
         buttonContrareloj.layer.shadowOpacity = 0.1
         buttonContrareloj.layer.shadowRadius = 1.0
 
+        if UIScreen.main.bounds.height < 667 {
+            buttonContrareloj.titleLabel?.adjustsFontSizeToFitWidth = true
+        }
+        
         whiteContainer.frame.origin.y = viewGradient.frame.height * 0.15
         
         view.sendSubviewToBack(viewGradient)

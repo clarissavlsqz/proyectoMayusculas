@@ -4,6 +4,7 @@
 //
 //  Created by Clarissa Velásquez Magaña on 12/10/21.
 //  Timer code reference from https://stackoverflow.com/questions/30289173/how-to-create-a-circular-progress-indicator-for-a-count-down-timer
+// Image background reference: <a href="https://www.vecteezy.com/free-vector/purple">Purple Vectors by Vecteezy</a>
 
 import UIKit
 
@@ -64,7 +65,8 @@ class ViewControllerGame: UIViewController {
         
         //Font size
         labelInstruction.font = labelInstruction.font.withSize(self.view.frame.height / 35)
-        labelQuestion.font = labelQuestion.font.withSize(self.view.frame.height / 40)
+        labelQuestion.adjustsFontSizeToFitWidth = true
+        
         
         // Do any additional setup after loading the view.
         imagePurpleBg.clipsToBounds = false
@@ -432,11 +434,27 @@ class ViewControllerGame: UIViewController {
             buttonOpc4.addTarget(self, action: #selector(holdDown), for: .touchDown)
             buttonOpc4.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
             
-            buttonOpc1.titleLabel?.font = buttonOpc1.titleLabel?.font.withSize(self.view.frame.height / 40)
-            buttonOpc2.titleLabel?.font = buttonOpc2.titleLabel?.font.withSize(self.view.frame.height / 40)
-            buttonOpc3.titleLabel?.font = buttonOpc3.titleLabel?.font.withSize(self.view.frame.height / 40)
-            buttonOpc4.titleLabel?.font = buttonOpc4.titleLabel?.font.withSize(self.view.frame.height / 40)
+            buttonOpc1.titleLabel?.font = buttonOpc1.titleLabel?.font.withSize(self.view.frame.height / 50)
+            buttonOpc2.titleLabel?.font = buttonOpc2.titleLabel?.font.withSize(self.view.frame.height / 50)
+            buttonOpc3.titleLabel?.font = buttonOpc3.titleLabel?.font.withSize(self.view.frame.height / 50)
+            buttonOpc4.titleLabel?.font = buttonOpc4.titleLabel?.font.withSize(self.view.frame.height / 50)
             
+            buttonOpc1.titleLabel?.minimumScaleFactor = 0.5
+            buttonOpc1.titleLabel?.numberOfLines = 0   //<-- Or to desired number of lines
+            buttonOpc1.titleLabel?.adjustsFontSizeToFitWidth = true
+            
+            buttonOpc2.titleLabel?.minimumScaleFactor = 0.5
+            buttonOpc2.titleLabel?.numberOfLines = 0   //<-- Or to desired number of lines
+            buttonOpc2.titleLabel?.adjustsFontSizeToFitWidth = true
+            
+            buttonOpc3.titleLabel?.minimumScaleFactor = 0.5
+            buttonOpc3.titleLabel?.numberOfLines = 0   //<-- Or to desired number of lines
+            buttonOpc3.titleLabel?.adjustsFontSizeToFitWidth = true
+            
+            buttonOpc4.titleLabel?.minimumScaleFactor = 0.5
+            buttonOpc4.titleLabel?.numberOfLines = 0   //<-- Or to desired number of lines
+            buttonOpc4.titleLabel?.adjustsFontSizeToFitWidth = true
+
         }
     }
     
