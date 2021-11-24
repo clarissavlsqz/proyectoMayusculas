@@ -105,28 +105,10 @@
 		<integer>1</integer>
 		<key>respuesta</key>
 		<array>
-			<string>mayu</string>
+			<string>min</string>
 		</array>
 		<key>enunciado</key>
-		<string>sierra madre</string>
-	</dict>
-	<dict>
-		<key>opciones</key>
-		<array/>
-		<key>normas</key>
-		<array>
-			<integer>1</integer>
-		</array>
-		<key>tipo</key>
-		<integer>1</integer>
-		<key>dificultad</key>
-		<integer>1</integer>
-		<key>respuesta</key>
-		<array>
-			<string>mayu</string>
-		</array>
-		<key>enunciado</key>
-		<string>sierra nevada</string>
+		<string>sierra</string>
 	</dict>
 	<dict>
 		<key>opciones</key>
@@ -618,10 +600,10 @@
 		<key>opciones</key>
 		<array>
 			<array>
-				<string>mundial</string>
-				<string>guerra</string>
-				<string>primera</string>
 				<string>la</string>
+				<string>primera</string>
+				<string>guerra</string>
+				<string>mundial</string>
 			</array>
 			<array>
 				<string>primera</string>
@@ -648,10 +630,10 @@
 		<integer>2</integer>
 		<key>respuesta</key>
 		<array>
-			<string>mundial</string>
-			<string>guerra</string>
-			<string>primera</string>
 			<string>la</string>
+			<string>primera</string>
+			<string>guerra</string>
+			<string>mundial</string>
 		</array>
 		<key>enunciado</key>
 		<string>la primera guerra mundial inició el 28 de julio de 1914.</string>
@@ -742,10 +724,10 @@
 		<key>opciones</key>
 		<array>
 			<array>
-				<string>salud</string>
-				<string>mundial</string>
-				<string>organización</string>
 				<string>la</string>
+				<string>organización</string>
+				<string>mundial</string>
+				<string>salud</string>
 			</array>
 			<array>
 				<string>la</string>
@@ -777,10 +759,10 @@
 		<integer>1</integer>
 		<key>respuesta</key>
 		<array>
-			<string>salud</string>
-			<string>mundial</string>
-			<string>organización</string>
 			<string>la</string>
+			<string>organización</string>
+			<string>mundial</string>
+			<string>salud</string>
 		</array>
 		<key>enunciado</key>
 		<string>la organización mundial de la salud no ha avalado todas las vacunas.</string>
@@ -803,7 +785,6 @@
 			</array>
 			<array>
 				<string>la</string>
-				<string>dirección</string>
 			</array>
 		</array>
 		<key>normas</key>
@@ -826,10 +807,10 @@
 		<key>opciones</key>
 		<array>
 			<array>
-				<string>oro</string>
-				<string>siglo</string>
-				<string>barca</string>
 				<string>calderón</string>
+				<string>barca</string>
+				<string>siglo</string>
+				<string>oro</string>
 			</array>
 			<array>
 				<string>calderón</string>
@@ -857,10 +838,10 @@
 		<integer>1</integer>
 		<key>respuesta</key>
 		<array>
-			<string>oro</string>
-			<string>siglo</string>
-			<string>barca</string>
 			<string>calderón</string>
+			<string>barca</string>
+			<string>siglo</string>
+			<string>oro</string>
 		</array>
 		<key>enunciado</key>
 		<string>calderón de la barca es un famoso escritor del siglo de oro español. </string>
@@ -936,8 +917,8 @@
 		<integer>2</integer>
 		<key>respuesta</key>
 		<array>
-			<string>biden</string>
 			<string>el</string>
+			<string>biden</string>
 		</array>
 		<key>enunciado</key>
 		<string>el presidente biden recibirá a los embajadores el día de mañana.</string>
@@ -1170,7 +1151,7 @@
 			<array>
 				<string>don</string>
 				<string>mario</string>
-				<string>premio</string>
+				<string>molina</string>
 				<string>nobel</string>
 				<string>de</string>
 				<string>química</string>
@@ -1510,8 +1491,8 @@
 				<string>por</string>
 			</array>
 			<array>
-				<string>w</string>
 				<string>por</string>
+				<string>w</string>
 			</array>
 			<array>
 				<string>por</string>
@@ -1534,8 +1515,8 @@
 		<integer>1</integer>
 		<key>respuesta</key>
 		<array>
-			<string>w</string>
 			<string>por</string>
+			<string>w</string>
 		</array>
 		<key>enunciado</key>
 		<string>por favor me traes de la tienda un foco de 20 w.</string>
@@ -1555,9 +1536,9 @@
 				<string>alicia</string>
 			</array>
 			<array>
-				<string>espero</string>
-				<string>alicia</string>
 				<string>estimada</string>
+				<string>alicia</string>
+				<string>espero</string>
 			</array>
 		</array>
 		<key>normas</key>
@@ -1572,9 +1553,9 @@
 		<integer>1</integer>
 		<key>respuesta</key>
 		<array>
-			<string>espero</string>
-			<string>alicia</string>
 			<string>estimada</string>
+			<string>alicia</string>
+			<string>espero</string>
 		</array>
 		<key>enunciado</key>
 		<string>estimada alicia:  espero que te encuentres muy bien.</string>
@@ -1590,8 +1571,8 @@
 				<string>frío</string>
 			</array>
 			<array>
-				<string>está</string>
 				<string>no</string>
+				<string>está</string>
 			</array>
 			<array>
 				<string>está</string>
@@ -1608,8 +1589,8 @@
 		<integer>1</integer>
 		<key>respuesta</key>
 		<array>
-			<string>está</string>
 			<string>no</string>
+			<string>está</string>
 		</array>
 		<key>enunciado</key>
 		<string>¿no tienes frío? ¡está helando!</string>
@@ -1654,8 +1635,8 @@
 				<string>este</string>
 			</array>
 			<array>
-				<string>este</string>
 				<string>advertencia</string>
+				<string>este</string>
 			</array>
 			<array>
 				<string>advertencia</string>
@@ -1676,11 +1657,48 @@
 		<integer>2</integer>
 		<key>respuesta</key>
 		<array>
-			<string>este</string>
 			<string>advertencia</string>
+			<string>este</string>
 		</array>
 		<key>enunciado</key>
 		<string>advertencia: este medicamento debe mantenerse en refrigeración.</string>
+	</dict>
+	<dict>
+		<key>opciones</key>
+		<array>
+			<array>
+				<string>en</string>
+				<string>flaco</string>
+			</array>
+			<array>
+				<string>en</string>
+				<string>te</string>
+			</array>
+			<array>
+				<string>en</string>
+				<string>flaco</string>
+				<string>saludos</string>
+			</array>
+			<array>
+				<string>en</string>
+			</array>
+		</array>
+		<key>normas</key>
+		<array>
+			<integer>1</integer>
+			<integer>2</integer>
+		</array>
+		<key>tipo</key>
+		<integer>2</integer>
+		<key>dificultad</key>
+		<integer>1</integer>
+		<key>respuesta</key>
+		<array>
+			<string>en</string>
+			<string>flaco</string>
+		</array>
+		<key>enunciado</key>
+		<string>en la fiesta saludé al flaco, te mandó saludos.</string>
 	</dict>
 </array>
 </plist>

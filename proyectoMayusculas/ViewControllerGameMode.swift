@@ -15,8 +15,11 @@ class ViewControllerGameMode: UIViewController {
     @IBOutlet weak var buttonZen: UIButton!
     @IBOutlet weak var buttonContrareloj: UIButton!
     
+    @IBOutlet weak var whiteContainerTopCons: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        whiteContainerTopCons.constant = view.frame.height * 0.05
         
         whiteContainer.layer.cornerRadius = 10
         whiteContainer.layer.shadowColor = UIColor.black.cgColor
@@ -36,13 +39,21 @@ class ViewControllerGameMode: UIViewController {
         buttonContrareloj.layer.shadowOpacity = 0.1
         buttonContrareloj.layer.shadowRadius = 1.0
 
+        if UIScreen.main.bounds.height < 667 {
+            buttonContrareloj.titleLabel?.adjustsFontSizeToFitWidth = true
+        }
         
+        whiteContainer.frame.origin.y = viewGradient.frame.height * 0.15
+        
+        view.sendSubviewToBack(viewGradient)
         
         buttonContrareloj.layer.cornerRadius = 7
 
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.tintColor = .white
             //UIColor.init(red: 0.44, green: 0.20, blue: 0.66, alpha: 1.00)
+        
+        self.navigationController?.navigationItem.backButtonTitle = "Atrás"
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds

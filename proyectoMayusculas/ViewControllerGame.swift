@@ -4,6 +4,7 @@
 //
 //  Created by Clarissa Velásquez Magaña on 12/10/21.
 //  Timer code reference from https://stackoverflow.com/questions/30289173/how-to-create-a-circular-progress-indicator-for-a-count-down-timer
+// Image background reference: <a href="https://www.vecteezy.com/free-vector/purple">Purple Vectors by Vecteezy</a>
 
 import UIKit
 
@@ -47,7 +48,7 @@ class ViewControllerGame: UIViewController {
     // Timer variables
     let circularLayer = CAShapeLayer()
     let progressLayer = CAShapeLayer()
-    var timeLeft: TimeInterval = 180
+    var timeLeft: TimeInterval = 60
     var endTime: Date?
     var timeLabel : UILabel!
     var timer = Timer()
@@ -64,7 +65,8 @@ class ViewControllerGame: UIViewController {
         
         //Font size
         labelInstruction.font = labelInstruction.font.withSize(self.view.frame.height / 35)
-        labelQuestion.font = labelQuestion.font.withSize(self.view.frame.height / 40)
+        labelQuestion.adjustsFontSizeToFitWidth = true
+        
         
         // Do any additional setup after loading the view.
         imagePurpleBg.clipsToBounds = false
@@ -102,7 +104,7 @@ class ViewControllerGame: UIViewController {
             // define the fromValue, toValue and duration of your animation
             strokeIt.fromValue = 0
             strokeIt.toValue = 1
-            strokeIt.duration = 180
+            strokeIt.duration = 60
             // add the animation to your timeLeftShapeLayer
             progressLayer.add(strokeIt, forKey: nil)
             // define the future end time by adding the timeLeft to now Date()
@@ -121,6 +123,7 @@ class ViewControllerGame: UIViewController {
         else {
             timeLabel.text = "00:00"
             timer.invalidate()
+            showResults()
         }
     }
     
@@ -133,7 +136,7 @@ class ViewControllerGame: UIViewController {
     }
     
     func drawCircularShape() {
-        circularLayer.path = UIBezierPath(arcCenter: CGPoint(x: view.frame.midX, y: 70.0), radius: 30, startAngle: CGFloat(-Double.pi / 2), endAngle: CGFloat(3 * Double.pi / 2), clockwise: true).cgPath
+        circularLayer.path = UIBezierPath(arcCenter: CGPoint(x: view.frame.midX, y: 90), radius: 30, startAngle: CGFloat(-Double.pi / 2), endAngle: CGFloat(3 * Double.pi / 2), clockwise: true).cgPath
         circularLayer.strokeColor = UIColor.lightGray.cgColor
         circularLayer.fillColor = UIColor.white.cgColor
         circularLayer.lineWidth = 3
@@ -141,7 +144,7 @@ class ViewControllerGame: UIViewController {
     }
     
     func drawProgressShape() {
-        progressLayer.path = UIBezierPath(arcCenter: CGPoint(x: view.frame.midX, y: 70.0), radius: 30, startAngle: CGFloat(-90 * Double.pi / 180), endAngle: CGFloat(270 * Double.pi / 180), clockwise: true).cgPath
+        progressLayer.path = UIBezierPath(arcCenter: CGPoint(x: view.frame.midX, y: 90), radius: 30, startAngle: CGFloat(-90 * Double.pi / 180), endAngle: CGFloat(270 * Double.pi / 180), clockwise: true).cgPath
         progressLayer.strokeColor = UIColor.red.cgColor
         progressLayer.fillColor = UIColor.clear.cgColor
         progressLayer.lineWidth = 3
@@ -149,7 +152,7 @@ class ViewControllerGame: UIViewController {
     }
     
     func addTimeLabel() {
-        timeLabel = UILabel(frame: CGRect(x: view.frame.midX-25 ,y: 38.0, width: 50, height: 65))
+        timeLabel = UILabel(frame: CGRect(x: view.frame.midX-25 ,y: 58.0, width: 50, height: 65))
         timeLabel.textAlignment = .center
         timeLabel.text = timeLeft.timeStr
         view.addSubview(timeLabel)
@@ -200,7 +203,7 @@ class ViewControllerGame: UIViewController {
         var alert : UIAlertController
         timer.invalidate()
         if score == 10 {
-            alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/10 aciertos.\n¡Felicidades!", preferredStyle: UIAlertController.Style.alert)
+            alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/10 aciertos.\n¡Felicidades!\nTeclea tu nombre para guardar tu puntaje", preferredStyle: UIAlertController.Style.alert)
         }
         else {
             var rules : String = ""
@@ -209,7 +212,7 @@ class ViewControllerGame: UIViewController {
             }
             rules.remove(at: rules.index(before: rules.endIndex))
             
-            alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/10 aciertos\nRevisa la o las siguientes reglas: \(rules)"  , preferredStyle: UIAlertController.Style.alert)
+            alert = UIAlertController(title: "Resultado", message: "Has obtenido \(score)/10 aciertos.\nRevisa la o las siguientes reglas: \(rules).\nTeclea tu nombre para guardar tu puntaje"  , preferredStyle: UIAlertController.Style.alert)
         }
         
         alert.addTextField()
@@ -431,11 +434,27 @@ class ViewControllerGame: UIViewController {
             buttonOpc4.addTarget(self, action: #selector(holdDown), for: .touchDown)
             buttonOpc4.addTarget(self, action: #selector(holdRelease), for: .touchUpInside)
             
-            buttonOpc1.titleLabel?.font = buttonOpc1.titleLabel?.font.withSize(self.view.frame.height / 40)
-            buttonOpc2.titleLabel?.font = buttonOpc2.titleLabel?.font.withSize(self.view.frame.height / 40)
-            buttonOpc3.titleLabel?.font = buttonOpc3.titleLabel?.font.withSize(self.view.frame.height / 40)
-            buttonOpc4.titleLabel?.font = buttonOpc4.titleLabel?.font.withSize(self.view.frame.height / 40)
+            buttonOpc1.titleLabel?.font = buttonOpc1.titleLabel?.font.withSize(self.view.frame.height / 50)
+            buttonOpc2.titleLabel?.font = buttonOpc2.titleLabel?.font.withSize(self.view.frame.height / 50)
+            buttonOpc3.titleLabel?.font = buttonOpc3.titleLabel?.font.withSize(self.view.frame.height / 50)
+            buttonOpc4.titleLabel?.font = buttonOpc4.titleLabel?.font.withSize(self.view.frame.height / 50)
             
+            buttonOpc1.titleLabel?.minimumScaleFactor = 0.5
+            buttonOpc1.titleLabel?.numberOfLines = 0   //<-- Or to desired number of lines
+            buttonOpc1.titleLabel?.adjustsFontSizeToFitWidth = true
+            
+            buttonOpc2.titleLabel?.minimumScaleFactor = 0.5
+            buttonOpc2.titleLabel?.numberOfLines = 0   //<-- Or to desired number of lines
+            buttonOpc2.titleLabel?.adjustsFontSizeToFitWidth = true
+            
+            buttonOpc3.titleLabel?.minimumScaleFactor = 0.5
+            buttonOpc3.titleLabel?.numberOfLines = 0   //<-- Or to desired number of lines
+            buttonOpc3.titleLabel?.adjustsFontSizeToFitWidth = true
+            
+            buttonOpc4.titleLabel?.minimumScaleFactor = 0.5
+            buttonOpc4.titleLabel?.numberOfLines = 0   //<-- Or to desired number of lines
+            buttonOpc4.titleLabel?.adjustsFontSizeToFitWidth = true
+
         }
     }
     

@@ -15,6 +15,7 @@ class ViewControllerDifficulty: UIViewController {
     @IBOutlet weak var buttonBasico: UIButton!
     @IBOutlet weak var buttonAvanzado: UIButton!
     @IBOutlet weak var whiteContainer: UIView!
+    @IBOutlet weak var viewGradient: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,14 @@ class ViewControllerDifficulty: UIViewController {
         buttonAvanzado.layer.shadowOffset = CGSize(width: 0, height: 0)
         buttonAvanzado.layer.shadowOpacity = 0.1
         buttonAvanzado.layer.shadowRadius = 1.0
+        
+        view.sendSubviewToBack(viewGradient)
+
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [#colorLiteral(red: 0.44, green: 0.20, blue: 0.66, alpha: 1.00).cgColor, UIColor(red: 0.56, green: 0.14, blue: 0.85, alpha: 1.00).cgColor]
+        gradientLayer.shouldRasterize = true
+        viewGradient.layer.addSublayer(gradientLayer)
     }
     
     
