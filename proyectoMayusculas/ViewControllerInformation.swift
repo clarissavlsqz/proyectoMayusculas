@@ -9,10 +9,10 @@ import UIKit
 
 class ViewControllerInformation: UIViewController {
     
-    let info1 = "fue desarrollada por estudiantes del Instituto tecnológico y de Estudios Superiores de Monterrey durante el periodo Agosto-Diciembre 2021 como proyecto final para la clase de Proyecto de Desarrollo para Dispositivos Móviles. \n\nDesarrolladores: Ana Lizbeth Zermeño Torres, Clarissa Andrea Velásquez Magaña y Fernando Martínez Ortiz\n\nMaestra: Mtra. Yolanda Martínez Treviño\n\nMentora de proyecto: Martha Aurelia Pérez Velasco\n\nSe prohíbe el uso de "
+    let info1 = " fue desarrollada por estudiantes del Instituto tecnológico y de Estudios Superiores de Monterrey durante el periodo Agosto-Diciembre 2021 como proyecto final para la clase de Proyecto de Desarrollo para Dispositivos Móviles. \n\nDesarrolladores: Ana Lizbeth Zermeño Torres, Clarissa Andrea Velásquez Magaña y Fernando Martínez Ortiz\n\nMaestra: Mtra. Yolanda Martínez Treviño\n\nMentora de proyecto: Martha Aurelia Pérez Velasco\n\nSe prohíbe el uso de "
     let info2 = "con fines de lucro. Esta aplicación fue creada con un enfoque a la información y se prohíbe su distribución para otros usos y medios."
     
-    let boldText = "Mayúsculas "
+    let boldText = "¿Mayúsculas o minúsculas?"
     
     
     @IBOutlet weak var labelTitle: UILabel!
